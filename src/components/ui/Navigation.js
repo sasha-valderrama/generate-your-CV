@@ -29,8 +29,8 @@ const Title = styled.h1`
   text-shadow: 3px 3px 0 ${(props) => props.theme.colors.black};
   font-size: ${(props) => props.theme.fontSize.xxl};
   font-weight: bold;
-  transition: transform 750ms linear;
   &:hover {
-    transform: scale(1.1);
-  }
+    color: ${(props) => props.theme.colors.neutral};
+    background-color:
+      ${(props) => props.theme.colors.primary}); }
 `;

@@ -14,7 +14,7 @@ export default function Home() {
 
 const HomeStyled = styled.div`
   color: ${(props) => props.theme.colors.quaternary};
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.colors.neutral};
   ${centerContent};
   position: relative;
   z-index: -1;
