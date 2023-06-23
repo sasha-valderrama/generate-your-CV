@@ -2,13 +2,16 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { centerContent } from '../../util/utilities';
 import { Button } from './Button';
+import { Link } from 'react-router-dom';
 
 export default function Navigation() {
   return (
     <NavigationStyled>
       <Button primary>Save</Button>
       <Title>Generate your CV</Title>
-      <Button>Reset</Button>
+      <Button>
+        <Link to="/">Reset</Link>
+      </Button>
     </NavigationStyled>
   );
 }

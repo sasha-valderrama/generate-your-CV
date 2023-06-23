@@ -27,10 +27,10 @@ export const wobble = keyframes`
       transform-origin: 50% 50%;
     }
     15% {
-      transform: translateX(-30px) rotate(-6deg);
+      transform: translateX(-15px) rotate(-3deg);
     }
     30% {
-      transform: translateX(15px) rotate(6deg);
+      transform: translateX(15px) rotate(3deg);
     }
     45% {
       transform: translateX(-15px) rotate(-3.6deg);

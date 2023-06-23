@@ -18,8 +18,8 @@ const HomeStyled = styled.div`
   // position: relative;
   // z-index: 999;
   // top: 0;
-  padding-top: 5rem;
-  padding-bottom: 4rem;
+  padding-top: 4.5rem;
+  padding-bottom: 2rem;
   min-height: calc(100vh - 8rem);
   display: flex;
   align-items: flex-start;

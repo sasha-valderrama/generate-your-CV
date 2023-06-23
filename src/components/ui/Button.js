@@ -12,7 +12,7 @@ ${standardBorder};
   background-color: ${(props) => props.theme.colors.quaternary};
   border-radius: ${(props) =>
     props.primary ? '10px 10px 0px 10px' : '10px 10px 10px 0px'};
-    
+
   &:hover,&:focus{
     color: ${(props) =>
       props.primary ? props.theme.colors.tertiary : props.theme.colors.primary};
@@ -22,7 +22,7 @@ ${standardBorder};
       props.primary
         ? `5px 5px 0 ${props.theme.colors.secondary}`
         : `-5px 5px 0 ${props.theme.colors.primary}`};
-     animation:  ${wobble} 1800ms ease-out;
+    animation:  ${wobble} 1800ms ease-out;
 }
   }
  }

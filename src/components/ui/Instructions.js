@@ -8,6 +8,7 @@ import {
 } from '../../util/utilities';
 import { Button } from './Button';
 import { listOfInstructions } from '../../data';
+import { Link } from 'react-router-dom';
 
 export default function Instructions() {
   return (
@@ -20,7 +21,9 @@ export default function Instructions() {
           return <ListItem key={item.id}>{item.instruction}</ListItem>;
         })}
       </WelcomeMessage>
-      <Button>Let's get started</Button>
+      <Button>
+        <Link to="/cv-form">Let's get started</Link>
+      </Button>
     </MessageWrapper>
   );
 }
