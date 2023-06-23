@@ -9,13 +9,15 @@ export const Button = styled.button`
   border: 4px solid #000;
   text-transform: uppercase;
   font-weight: bold;
-  color: ${(props) =>
-    props.primary ? props.theme.colors.tertiary : props.theme.colors.accent};
-  background-color: ${(props) =>
-    props.primary ? props.theme.colors.accent : props.theme.colors.tertiary};
+  color: ${(props) => props.theme.colors.neutral};
+  background-color: ${(props) => props.theme.colors.quaternary};
   border-radius: ${(props) =>
-    props.primary ? '100px 25px 100px 25px' : '25px 100px 25px 100px'};
+    props.primary ? '10px 10px 0px 10px' : '10px 10px 10px 0px'};
   &:hover {
-    box-shadow: 4px 4px 0 ${(props) => props.theme.colors.primary};
+    color: ${(props) =>
+      props.primary ? props.theme.colors.tertiary : props.theme.colors.primary};
+    background-color: ${(props) =>
+      props.primary ? props.theme.colors.accent : props.theme.colors.tertiary};
+    // box-shadow: 5px 5px 0 ${(props) => props.theme.colors.primary};
   }
 `;

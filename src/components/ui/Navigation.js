@@ -17,7 +17,7 @@ const NavigationStyled = styled.div`
   ${centerContent}
   justify-content: space-around;
   width: 100vw;
-  height: min(7rem, 16vh);
+  height: 8rem;
   background-color: ${(props) => props.theme.colors.quaternary};
   border-bottom: 4px solid ${(props) => props.theme.colors.black};
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -25,8 +25,12 @@ const NavigationStyled = styled.div`
 
 const Title = styled.h1`
   font-size: ${(props) => props.theme.fontSize.xxl};
-  color: ${(props) => props.theme.colors.primary};
-  text-shadow: 4px 4px 4px ${(props) => props.theme.colors.black};
+  color: ${(props) => props.theme.colors.accentSecond};
+  text-shadow: 3px 3px 0 ${(props) => props.theme.colors.black};
   font-size: ${(props) => props.theme.fontSize.xxl};
   font-weight: bold;
+  transition: transform 750ms linear;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;

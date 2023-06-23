@@ -16,11 +16,13 @@ export default function Root() {
 
 export const theme = {
   colors: {
-    primary: '#FCD5D5',
+    primary: '#FFF587',
     secondary: '#caf0f8',
     tertiary: '#80004C',
-    quaternary: '#1C748C',
+    quaternary: '#223978',
     accent: '#FFA113',
+    accentSecond: '#FF6600',
+    neutral: '#FCD5D5',
     black: '#000',
     white: '#fff',
   },

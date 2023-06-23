@@ -12,8 +12,9 @@ import Root from './components/Root';
 const appRouter = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />}>
-      <Route index element={<Home />} />
-      <Route path="cv-form" element={<CVForm />} />
+      <Route exact path="/" element={<Home />}>
+        <Route path=":cv-form" element={<CVForm />} />
+      </Route>
     </Route>
   )
 );
