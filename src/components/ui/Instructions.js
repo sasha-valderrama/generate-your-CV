@@ -21,9 +21,9 @@ export default function Instructions() {
           return <ListItem key={item.id}>{item.instruction}</ListItem>;
         })}
       </WelcomeMessage>
-      <Button>
-        <Link to="/cv-form">Let's get started</Link>
-      </Button>
+      <Link to="/cv-form">
+        <Button>Let's get started</Button>
+      </Link>
     </MessageWrapper>
   );
 }

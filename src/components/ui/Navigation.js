@@ -9,9 +9,9 @@ export default function Navigation() {
     <NavigationStyled>
       <Button primary>Save</Button>
       <Title>Generate your CV</Title>
-      <Button>
-        <Link to="/">Reset</Link>
-      </Button>
+      <Link to="/">
+        <Button>Reset </Button>
+      </Link>
     </NavigationStyled>
   );
 }

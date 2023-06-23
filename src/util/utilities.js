@@ -19,6 +19,7 @@ export const standardBorderRadius = css`
 export const standardBorder = css`
   border: 4px solid #000;
 `;
+
 //Animista Library  - https://animista.net/
 export const wobble = keyframes`
     0%,
@@ -27,10 +28,10 @@ export const wobble = keyframes`
       transform-origin: 50% 50%;
     }
     15% {
-      transform: translateX(-15px) rotate(-3deg);
+      transform: translateX(-15px) rotate(-6deg);
     }
     30% {
-      transform: translateX(15px) rotate(3deg);
+      transform: translateX(15px) rotate(6deg);
     }
     45% {
       transform: translateX(-15px) rotate(-3.6deg);
