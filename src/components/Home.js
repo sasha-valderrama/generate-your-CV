@@ -6,7 +6,6 @@ import { Outlet } from 'react-router-dom';
 export default function Home() {
   return (
     <HomeStyled>
-      HomeSTyling
       <Outlet />
     </HomeStyled>
   );
@@ -16,8 +15,12 @@ const HomeStyled = styled.div`
   color: ${(props) => props.theme.colors.quaternary};
   background-color: ${(props) => props.theme.colors.neutral};
   ${centerContent};
-  position: relative;
-  z-index: -1;
-  padding-top: 4rem;
+  // position: relative;
+  // z-index: 999;
+  // top: 0;
+  padding-top: 5rem;
   padding-bottom: 4rem;
+  min-height: calc(100vh - 8rem);
+  display: flex;
+  align-items: flex-start;
 `;

@@ -21,7 +21,7 @@ export const theme = {
     tertiary: '#80004C',
     quaternary: '#223978',
     accent: '#FFA113',
-    accentSecond: '#FF6600',
+    accentSecond: '#ff3b14',
     neutral: '#FCD5D5',
     black: '#000',
     white: '#fff',

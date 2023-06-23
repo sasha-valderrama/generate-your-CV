@@ -8,12 +8,20 @@ import {
   createRoutesFromElements,
 } from 'react-router-dom';
 import Root from './components/Root';
+import Instructions from './components/ui/Instructions';
+import PageNotFound from './components/PageNotFound';
 
 const appRouter = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />}>
-      <Route exact path="/" element={<Home />}>
-        <Route path=":cv-form" element={<CVForm />} />
+      <Route path="/" element={<Home />}>
+        <Route index element={<Instructions />} />
+        <Route path="cv-form" element={<CVForm />} />
+        {/* <Sidebar left></Sidebar> */}
+        {/* <p>HomeSTyling</p>
+        <CVform></CVform> */}
+        {/* <Sidebar right></Sidebar> */}
+        <Route path="*" element={<PageNotFound />} />
       </Route>
     </Route>
   )
