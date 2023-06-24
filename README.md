@@ -2,6 +2,16 @@
 
 First React Project :D
 
-## Styling using
+## Built with
 
+React
+react-icons
+react-router-dom
+react-to-print
+uuid
+
+## Styled with
+
+@emotion/css
+@emotion/react
 @emotion/styled

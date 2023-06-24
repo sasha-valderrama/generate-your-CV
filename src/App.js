@@ -1,6 +1,6 @@
 import './assets/global.css';
 import Home from './pages/Home';
-import CVForm from './pages/CVform';
+import CVForm from './pages/CVForm';
 import {
   Route,
   RouterProvider,
@@ -17,10 +17,6 @@ const appRouter = createBrowserRouter(
       <Route path="/" element={<Home />}>
         <Route index element={<Instructions />} />
         <Route path="cv-form" element={<CVForm />} />
-        {/* <Sidebar left></Sidebar> */}
-        {/* <p>HomeSTyling</p>
-        <CVform></CVform> */}
-        {/* <Sidebar right></Sidebar> */}
         <Route path="*" element={<PageNotFound />} />
       </Route>
     </Route>
