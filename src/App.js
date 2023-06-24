@@ -1,15 +1,15 @@
 import './assets/global.css';
-import Home from './components/Home';
-import CVForm from './components/CVform';
+import Home from './pages/Home';
+import CVForm from './pages/CVform';
 import {
   Route,
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
 } from 'react-router-dom';
-import Root from './components/Root';
-import Instructions from './components/Instructions';
-import PageNotFound from './components/PageNotFound';
+import Root from './pages/Root';
+import Instructions from './pages/Instructions';
+import PageNotFound from './pages/PageNotFound';
 
 const appRouter = createBrowserRouter(
   createRoutesFromElements(

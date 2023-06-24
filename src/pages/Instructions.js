@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { wave } from '../util/utilities';
-import { Button } from './ui/Button';
+import { Button } from '../components/ui/Button';
 import { Link } from 'react-router-dom';
-import { Message, MessageBox, MessageTitle } from './ui/MessageBox';
+import { Message, MessageBox, MessageTitle } from '../components/ui/MessageBox';
 
 const listOfInstructions = [
   {
