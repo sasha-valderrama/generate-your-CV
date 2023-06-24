@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 export default function PageNotFound() {
   return (
     <MessageBox>
-      <MessageTitle>Whoops! Something went wrong...</MessageTitle>
+      <MessageTitle>Error 404: Whoops! Something went wrong...</MessageTitle>
       <MessageTitle>
-        We're sorry, the page you requested could not be found Please go back to
-        the homepage.
+        We're sorry, the page you requested could not be found. Please go back
+        to the homepage.
       </MessageTitle>
       <Link to="/">
         <Button>Take Me Home</Button>
