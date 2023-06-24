@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
+import { standardBorderRadius } from '../../../util/utilities';
 
 export const ContactInfo = styled.div`
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   right: -1.5rem;
-  width: 32rem;
+  width: 16rem;
   height: 8rem;
   margin-top: 1rem;
   top: 0.5rem;
@@ -14,5 +15,7 @@ export const ContactInfo = styled.div`
   justify-content: center;
   align-items: flex-end;
   padding-right: 3.2rem;
-  background-color: ${(props) => props.theme.colors.accent};
+  background-color: ${(props) => props.theme.colors.white};
+  border: 3px solid ${(props) => props.theme.colors.black};
+  ${standardBorderRadius};
 `;

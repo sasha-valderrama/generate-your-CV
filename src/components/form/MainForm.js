@@ -7,6 +7,5 @@ export const MainForm = styled.div`
   height: fit-content;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5px;
   border: 1px solid red;
 `;
