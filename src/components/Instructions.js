@@ -2,9 +2,22 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { wave } from '../util/utilities';
 import { Button } from './ui/Button';
-import { listOfInstructions } from '../data';
 import { Link } from 'react-router-dom';
 import { Message, MessageBox, MessageTitle } from './ui/MessageBox';
+
+const listOfInstructions = [
+  {
+    id: '165',
+    instruction:
+      'Click on the Edit to start updating your resume and submit them.',
+  },
+  { id: '198', instruction: 'If you some inspiration click on "EXAMPLE".' },
+  {
+    id: '168',
+    instruction: 'Click on SAVE to download a PDF version of your resume.',
+  },
+  { id: '256', instruction: 'Click on RESET if you need to start over.' },
+];
 
 export default function Instructions() {
   return (
