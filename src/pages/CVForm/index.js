@@ -2,6 +2,7 @@ import React from 'react';
 import { OuterContainer } from '../../components/form/OuterContainer';
 import { MainForm } from '../../components/form/MainForm';
 import Heading from '../../components/form/heading';
+import { Edit, Example, Preview } from '../../components/ui/Buttons';
 
 const user = {
   firstName: 'Max',
@@ -26,6 +27,9 @@ const user = {
 export default function CVform() {
   return (
     <OuterContainer>
+      <Edit right>EDIT</Edit>
+      <Preview>PREVIEW</Preview>
+      <Example right>EXAMPLE</Example>
       <MainForm>
         <Heading
           firstName={user.firstName}
