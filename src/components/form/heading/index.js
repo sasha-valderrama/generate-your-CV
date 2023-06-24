@@ -7,16 +7,16 @@ import { ContactInfo } from './ContactInfo';
 import { ContactItem } from './ContactItem';
 import { ProfilePic } from './ProfilePic';
 
-export default function Heading() {
+export default function Heading({ firstName, lastName, jobPosition }) {
   return (
     <HeadingContainer>
       <ProfilePic></ProfilePic>
       <ProfileContainer>
-        <UserName>John</UserName>
+        <UserName>{firstName}</UserName>
         <UserName>
-          <strong>Doh</strong>
+          <strong>{lastName}</strong>
         </UserName>
-        <UserPosition>dfsdfsdfsd</UserPosition>
+        <UserPosition>{jobPosition}</UserPosition>
       </ProfileContainer>
       <ContactInfo>
         <ContactItem>city, state</ContactItem>
