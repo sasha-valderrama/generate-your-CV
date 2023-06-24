@@ -8,4 +8,5 @@ export const MainForm = styled.div`
   margin-left: auto;
   margin-right: auto;
   border: 1px solid red;
+  background-color: ${(props) => props.theme.colors.quaternary};
 `;

@@ -6,6 +6,10 @@ import { UserPosition } from './UserPosition';
 import { ContactInfo } from './ContactInfo';
 import { ContactItem } from './ContactItem';
 import { ProfilePic } from './ProfilePic';
+import { MdPhone } from 'react-icons/md';
+import { MdEmail } from 'react-icons/md';
+import { MdOutlineLocationOn } from 'react-icons/md';
+import { GiSpiderWeb } from 'react-icons/gi';
 
 export default function Heading({ firstName, lastName, jobPosition }) {
   return (
@@ -19,10 +23,20 @@ export default function Heading({ firstName, lastName, jobPosition }) {
         <UserPosition>{jobPosition}</UserPosition>
       </ProfileContainer>
       <ContactInfo>
-        <ContactItem>city, state</ContactItem>
-        <ContactItem>city, state</ContactItem>
-        <ContactItem>city, state</ContactItem>
-        <ContactItem>city, state</ContactItem>
+        <ContactItem>
+          {jobPosition} <MdPhone />
+        </ContactItem>
+        <ContactItem>
+          {jobPosition}
+          <MdEmail />
+        </ContactItem>
+        <ContactItem>
+          {jobPosition} <MdOutlineLocationOn />
+        </ContactItem>
+        <ContactItem>
+          {jobPosition}
+          <GiSpiderWeb />
+        </ContactItem>
       </ContactInfo>
     </HeadingContainer>
   );

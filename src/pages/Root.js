@@ -33,7 +33,7 @@ export const theme = {
     md: '16px',
     lg: '18px',
     xl: '24px',
-    xxl: '36px',
+    xxl: '32px',
   },
   fontFamily: {},
 };

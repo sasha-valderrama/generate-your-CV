@@ -4,35 +4,23 @@ import { MainForm } from '../../components/form/MainForm';
 import Heading from '../../components/form/heading';
 
 const user = {
-  firstName: 'John',
-  lastName: 'Doe',
+  firstName: 'Max',
+  lastName: 'Mustermann',
   jobPosition: 'Creative Designer',
-  contactInfo: [
-    {
-      id: '125',
-      address: {
-        city: 'Berlin',
-        country: 'Germany',
-        street: 'Afrikanische Str.',
-        number: 81,
-      },
+  contactInfo: {
+    address: {
+      city: 'Berlin',
+      country: 'Germany',
+      street: 'Afrikanische Str.',
+      number: 81,
     },
-    {
-      id: '245',
-      phone: {
-        prefix: '+15',
-        number: '153 737813373',
-      },
+    phone: {
+      prefix: '+15',
+      number: '153 737813373',
     },
-    {
-      id: '555',
-      email: 'sa.joselyn@posteo.de',
-    },
-    {
-      id: '875',
-      website: 'sdkmfd.com',
-    },
-  ],
+    email: 'sa.joselyn@posteo.de',
+    website: 'sdkmfd@posteo.com',
+  },
 };
 
 export default function CVform() {

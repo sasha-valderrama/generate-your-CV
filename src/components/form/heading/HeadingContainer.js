@@ -7,7 +7,7 @@ export const HeadingContainer = styled.div`
   display: flex;
   margin-top: 1rem;
   padding: 0.8rem 2rem;
-  width: 80%;
+  width: 75%;
   height: fit-content;
   margin-left: auto;
   margin-right: 3.5rem;
