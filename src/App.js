@@ -8,7 +8,7 @@ import {
   createRoutesFromElements,
 } from 'react-router-dom';
 import Root from './components/Root';
-import Instructions from './components/ui/Instructions';
+import Instructions from './components/Instructions';
 import PageNotFound from './components/PageNotFound';
 
 const appRouter = createBrowserRouter(
