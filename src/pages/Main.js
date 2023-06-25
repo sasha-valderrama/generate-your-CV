@@ -1,12 +1,39 @@
 import styled from '@emotion/styled';
-import React, { useState } from 'react';
+import React, { useReducer, useState } from 'react';
 import { Edit } from '../components/ui/Edit';
 import { exampleUser } from '../data';
 import Form from '../components/form';
 
+const reducer = (state, action) => {};
+
+const initialArg = {
+  firstName: '',
+  lastName: '',
+  jobPosition: '',
+  profilePic: '',
+  contactInfo: {
+    address: {
+      city: '',
+      country: '',
+    },
+    phone: {
+      prefix: '',
+      number: '',
+    },
+    email: '',
+    website: '',
+  },
+};
+
 export default function Main() {
   const [example, setExample] = useState(exampleUser);
+  const [state, dispatch] = useReducer(reducer, initialArg);
   console.log(example);
+
+  // const handleEdit = (e) => {
+  //   console.log(e);
+  // };
+
   return (
     <MainContainer>
       <Edit left>EXAMPLE</Edit>
