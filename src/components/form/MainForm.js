@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const MainForm = styled.div`
+export const MainForm = styled.form`
   position: relative;
   z-index: 999;
   width: 210mm;

@@ -18,8 +18,6 @@ const lateralButton = styled.div`
   color: ${(props) => props.theme.colors.black};
   font-weight: bold;
   background-color: ${(props) => props.theme.colors.neutral};
-  // display: flex;
-  // ${centerContent};
   writing-mode: vertical-rl;
   text-orientation: upright;
   &:hover,

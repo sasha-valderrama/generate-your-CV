@@ -1,10 +1,5 @@
 import styled from '@emotion/styled';
-import {
-  centerContent,
-  standardBorder,
-  standardBorderRadius,
-  wobble,
-} from '../../util/utilities';
+import { standardBorder, wobble } from '../../util/utilities';
 
 export const Button = styled.button`
 ${standardBorder};

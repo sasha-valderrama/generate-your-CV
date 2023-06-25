@@ -14,7 +14,7 @@ export const ContactInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  padding-right: 3.2rem;
+  padding-right: 1.4rem;
   background-color: ${(props) => props.theme.colors.white};
   border: 3px solid ${(props) => props.theme.colors.black};
   ${standardBorderRadius};
