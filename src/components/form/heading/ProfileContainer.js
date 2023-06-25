@@ -6,5 +6,4 @@ export const ProfileContainer = styled.div`
   left: -23%;
   margin-top: auto;
   margin-bottom: auto;
-  border: 1px solid red;
 `;
