@@ -1,22 +1,24 @@
 import styled from '@emotion/styled';
-import React from 'react';
-import CVform from './CVForm';
+import React, { useState } from 'react';
 import { Edit } from '../components/ui/Edit';
+import { exampleUser } from '../data';
+import Form from '../components/form';
 
 export default function Main() {
+  const [example, setExample] = useState(exampleUser);
+  console.log(example);
   return (
-    <MainStyled>
+    <MainContainer>
       <Edit left>EXAMPLE</Edit>
-      <CVform></CVform>
+      <Form firstName={exampleUser.firstName}></Form>
       <Edit right>UPDATE</Edit>
-    </MainStyled>
+    </MainContainer>
   );
 }
 
-const MainStyled = styled.div`
+const MainContainer = styled.div`
   color: ${(props) => props.theme.colors.quaternary};
   background-color: ${(props) => props.theme.colors.neutral};
-  width: fit-content;
   display: flex;
   align-items: flex-start;
   justify-content: center;
