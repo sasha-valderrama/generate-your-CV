@@ -15,7 +15,7 @@ const HomeStyled = styled.div`
   color: ${(props) => props.theme.colors.quaternary};
   background-color: ${(props) => props.theme.colors.neutral};
   ${centerContent};
-  // position: relative;
+  position: relative;
   // z-index: 999;
   // top: 0;
   padding-top: 4.5rem;

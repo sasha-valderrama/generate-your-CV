@@ -10,7 +10,6 @@ import { MdPhone } from 'react-icons/md';
 import { MdEmail } from 'react-icons/md';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import { GiSpiderWeb } from 'react-icons/gi';
-import { Edit } from '../../ui/Buttons';
 
 export default function Heading({ firstName, lastName, jobPosition }) {
   return (

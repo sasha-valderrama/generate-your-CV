@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { centerContent } from '../../util/utilities';
-import { Button } from './Buttons';
+import { Button } from './Button';
 import { Link } from 'react-router-dom';
 
 export default function Navigation() {

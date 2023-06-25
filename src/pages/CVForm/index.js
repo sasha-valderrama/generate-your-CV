@@ -2,7 +2,7 @@ import React from 'react';
 import { OuterContainer } from '../../components/form/OuterContainer';
 import { MainForm } from '../../components/form/MainForm';
 import Heading from '../../components/form/heading';
-import { Edit, Example, Preview } from '../../components/ui/Buttons';
+import { Edit } from '../../components/ui/Edit';
 
 const user = {
   firstName: 'Max',
@@ -26,27 +26,52 @@ const user = {
 
 export default function CVform() {
   return (
-    <OuterContainer>
+    <>
       <Edit right>EDIT</Edit>
-      <Preview>PREVIEW</Preview>
-      <Example right>EXAMPLE</Example>
-      <MainForm>
-        <Heading
-          firstName={user.firstName}
-          lastName={user.lastName}
-          jobPosition={user.jobPosition}
-        ></Heading>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-      </MainForm>
-    </OuterContainer>
+      <Edit left>EXAMPLE</Edit>
+      <OuterContainer>
+        <MainForm>
+          <Heading
+            firstName={user.firstName}
+            lastName={user.lastName}
+            jobPosition={user.jobPosition}
+          ></Heading>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+          <div>dfdsfdsfdsfdf</div>
+        </MainForm>
+      </OuterContainer>
+    </>
   );
 }
