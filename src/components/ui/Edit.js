@@ -1,9 +1,5 @@
 import styled from '@emotion/styled';
-import {
-  centerContent,
-  standardBorder,
-  standardBorderRadius,
-} from '../../util/utilities';
+import { standardBorder, standardBorderRadius } from '../../util/utilities';
 
 const lateralButton = styled.div`
   ${standardBorder};

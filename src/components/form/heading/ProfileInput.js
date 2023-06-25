@@ -19,4 +19,7 @@ export const ProfileInput = styled.input`
     color: ${(props) => props.theme.colors.white};
     outline: none;
   }
+  ::placeholder {
+    font-size: ${(props) => props.theme.fontSize.md};
+  }
 `;
