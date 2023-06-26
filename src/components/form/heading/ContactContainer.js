@@ -1,20 +1,17 @@
 import styled from '@emotion/styled';
-import { standardBorderRadius } from '../../../util/utilities';
+import { centerContent, standardBorderRadius } from '../../../util/utilities';
 
-export const ContactInfo = styled.div`
+export const ContactContainer = styled.div`
   position: absolute;
-  z-index: 0;
+  z-index: 999;
+  top: 0.5rem;
   right: -1.5rem;
   width: 16rem;
   height: 8rem;
   margin-top: 1rem;
-  top: 0.5rem;
-  display: flex;
+  ${centerContent};
   gap: 0.5rem;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  padding-right: 1.4rem;
   background-color: ${(props) => props.theme.colors.white};
   border: 3px solid ${(props) => props.theme.colors.black};
   ${standardBorderRadius};

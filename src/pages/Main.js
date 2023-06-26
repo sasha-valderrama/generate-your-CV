@@ -1,44 +1,27 @@
 import styled from '@emotion/styled';
-import React, { useReducer, useState } from 'react';
+import React from 'react';
 import { Edit } from '../components/ui/Edit';
-import { exampleUser } from '../data';
-import Form from '../components/form';
-
-const reducer = (state, action) => {};
-
-const initialArg = {
-  firstName: '',
-  lastName: '',
-  jobPosition: '',
-  profilePic: '',
-  contactInfo: {
-    address: {
-      city: '',
-      country: '',
-    },
-    phone: {
-      prefix: '',
-      number: '',
-    },
-    email: '',
-    website: '',
-  },
-};
+import { Outlet, useNavigate } from 'react-router-dom';
 
 export default function Main() {
-  const [example, setExample] = useState(exampleUser);
-  const [state, dispatch] = useReducer(reducer, initialArg);
-  console.log(example);
+  const navigate = useNavigate();
+  const showExample = () => {
+    navigate('/cv-form/example');
+  };
 
-  // const handleEdit = (e) => {
-  //   console.log(e);
-  // };
+  const showUpdate = () => {
+    navigate('/cv-form/update');
+  };
 
   return (
     <MainContainer>
-      <Edit left>EXAMPLE</Edit>
-      <Form firstName={exampleUser.firstName}></Form>
-      <Edit right>UPDATE</Edit>
+      <Edit left onClick={showExample}>
+        EXAMPLE
+      </Edit>
+      <Outlet />
+      <Edit right onClick={showUpdate}>
+        UPDATE
+      </Edit>
     </MainContainer>
   );
 }

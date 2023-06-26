@@ -23,6 +23,7 @@ ${standardBorder};
         ? `5px 5px 0 ${props.theme.colors.secondary}`
         : `-5px 5px 0 ${props.theme.colors.primary}`};
     animation:  ${wobble} 1800ms ease-out;
+      cursor: pointer;
 }
   }
  }

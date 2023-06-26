@@ -23,6 +23,7 @@ const lateralButton = styled.div`
   &:focus {
     background-color: ${(props) => props.theme.colors.accentSecond};
     box-shadow: ${(props) => `5px 5px 0 ${props.theme.colors.black}`};
+    cursor: pointer;
   }
 `;
 

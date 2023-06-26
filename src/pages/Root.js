@@ -28,12 +28,11 @@ export const theme = {
   },
   fontSize: {
     xxs: '8px',
-    xs: '10px',
+    xs: '12px',
     sm: '13px',
     md: '16px',
     lg: '18px',
-    xl: '24px',
+    xl: '20px',
     xxl: '32px',
   },
-  fontFamily: {},
 };

@@ -16,8 +16,6 @@ const HomeStyled = styled.div`
   background-color: ${(props) => props.theme.colors.neutral};
   ${centerContent};
   position: relative;
-  // z-index: 999;
-  // top: 0;
   padding-top: 4.5rem;
   padding-bottom: 2rem;
   min-height: calc(100vh - 8rem);

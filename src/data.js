@@ -3,18 +3,10 @@ export const exampleUser = {
   lastName: 'Valderrama',
   jobPosition: 'Jr. Frontend Developer',
   profilePic: ' ',
-  contactInfo: {
-    address: {
-      city: 'Berlin',
-      country: 'Germany',
-      // street: 'Afrikanische Str.',
-      // number: 81,
-    },
-    phone: {
-      prefix: '+15',
-      number: '153 737813373',
-    },
-    email: 'sa.joselyn@posteo.de',
-    website: 'https://github.com/sasha-valderrama',
-  },
+  phone: '+49 153 737813373',
+  city: 'Berlin',
+  country: 'Germany',
+  address: 'Berlin, Germany',
+  email: 'sa.joselyn@posteo.de',
+  url: 'github.com/sasha-valderrama',
 };

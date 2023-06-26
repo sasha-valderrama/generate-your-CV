@@ -10,7 +10,7 @@ export const HeadingContainer = styled.div`
   width: 75%;
   height: fit-content;
   margin-left: auto;
-  margin-right: 3.5rem;
+  margin-right: 3rem;
   border: 3px solid ${(props) => props.theme.colors.black};
   background-color: ${(props) => props.theme.colors.accent};
   ${standardBorderRadius};
