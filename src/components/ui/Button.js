@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
-import { standardBorder, wobble } from '../../util/utilities';
+import { standardBorder } from '../../util/utilities';
+import { wobble } from '../../util/keyframes';
 
 export const Button = styled.button`
 ${standardBorder};

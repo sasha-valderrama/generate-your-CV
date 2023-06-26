@@ -10,3 +10,14 @@ export const exampleUser = {
   email: 'sa.joselyn@posteo.de',
   url: 'github.com/sasha-valderrama',
 };
+
+export const initialArg = {
+  firstName: '',
+  lastName: '',
+  jobPosition: '',
+  profilePic: '',
+  phone: '',
+  address: '',
+  email: '',
+  url: '',
+};

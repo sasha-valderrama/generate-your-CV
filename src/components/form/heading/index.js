@@ -18,6 +18,7 @@ export default function Heading({
   email,
   address,
   url,
+  onChangeProfile,
 }) {
   return (
     <HeadingContainer>
@@ -30,6 +31,7 @@ export default function Heading({
           id="firstName"
           placeholder="Your first Name"
           value={firstName}
+          onChange={(e) => onChangeProfile(e)}
         />
         <ProfileInput
           username
@@ -38,6 +40,7 @@ export default function Heading({
           id="lastName"
           placeholder="Your last Name"
           value={lastName}
+          onChange={(e) => onChangeProfile(e)}
         />
         <ProfileInput
           type="text"
@@ -45,6 +48,7 @@ export default function Heading({
           id="jobPosition"
           placeholder="Position you applying for"
           value={jobPosition}
+          onChange={(e) => onChangeProfile(e)}
         />
       </ProfileContainer>
       <ContactContainer>
@@ -56,6 +60,7 @@ export default function Heading({
             id="phone"
             placeholder="+49 1573 75 133 68"
             value={phone}
+            onChange={(e) => onChangeProfile(e)}
           />
         </ContactWrapper>
         <ContactWrapper>
@@ -66,6 +71,7 @@ export default function Heading({
             id="email"
             placeholder="profesional_email@gmail.com"
             value={email}
+            onChange={(e) => onChangeProfile(e)}
           />
         </ContactWrapper>
         <ContactWrapper>
@@ -76,6 +82,7 @@ export default function Heading({
             id="address"
             placeholder="City, Country"
             value={address}
+            onChange={(e) => onChangeProfile(e)}
           />
         </ContactWrapper>
         <ContactWrapper>
@@ -86,6 +93,7 @@ export default function Heading({
             id="id"
             placeholder="github.com/sasha-valderrama"
             value={url}
+            onChange={(e) => onChangeProfile(e)}
           />
         </ContactWrapper>
       </ContactContainer>
