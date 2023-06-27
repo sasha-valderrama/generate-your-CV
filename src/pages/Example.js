@@ -17,20 +17,6 @@ export default function Example() {
           address={exampleUser.address}
           url={exampleUser.url}
         ></Heading>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
-        <div>dfdsfdsfdsfdf</div>
       </MainForm>
     </OuterContainer>
   );

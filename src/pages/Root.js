@@ -22,7 +22,9 @@ export const theme = {
     quaternary: '#223978',
     accent: '#FFA113',
     accentSecond: '#ff3b14',
+    accentThird: '#FF1212',
     neutral: '#FCD5D5',
+    neutralSecond: '#FFA1A1',
     black: '#000',
     white: '#fff',
   },
@@ -33,6 +35,7 @@ export const theme = {
     md: '16px',
     lg: '18px',
     xl: '20px',
-    xxl: '32px',
+    xxl: '36px',
+    title: '42px',
   },
 };

@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 export const MainForm = styled.form`
   position: relative;
   z-index: 999;
+  display: flex;
+  flex-direction: column;
   width: 210mm;
   height: fit-content;
   margin-left: auto;

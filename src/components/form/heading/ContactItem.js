@@ -3,8 +3,8 @@ import { centerContent } from '../../../util/utilities';
 
 export const ContactItem = styled.input`
   width: 190px;
-  color: ${(props) => props.theme.colors.quaternary};
   font-size: ${(props) => props.theme.fontSize.sm};
+  background-color: inherit;
   border: none;
   &:hover,
   &:focus {

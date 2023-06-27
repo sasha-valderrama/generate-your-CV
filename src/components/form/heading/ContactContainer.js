@@ -5,7 +5,7 @@ export const ContactContainer = styled.div`
   position: absolute;
   z-index: 999;
   top: 0.5rem;
-  right: -1.5rem;
+  right: -2.1rem;
   width: 16rem;
   height: 8rem;
   margin-top: 1rem;

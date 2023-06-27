@@ -1,4 +1,4 @@
-import { css, keyframes } from '@emotion/react';
+import { css } from '@emotion/react';
 
 export const centerContent = css`
   display: flex;
@@ -19,4 +19,3 @@ export const standardBorderRadius = css`
 export const standardBorder = css`
   border: 4px solid #000;
 `;
-

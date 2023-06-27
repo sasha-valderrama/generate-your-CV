@@ -31,7 +31,7 @@ const Title = styled.h1`
   font-size: ${(props) => props.theme.fontSize.xxl};
   color: ${(props) => props.theme.colors.accentSecond};
   text-shadow: 2px 2px 0 ${(props) => props.theme.colors.black};
-  font-size: ${(props) => props.theme.fontSize.xxl};
+  font-size: ${(props) => props.theme.fontSize.title};
   font-weight: bold;
   &:hover {
     color: ${(props) => props.theme.colors.neutral};

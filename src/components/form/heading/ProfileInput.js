@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 export const ProfileInput = styled.input`
   margin-top: -1rem;
+  margin-left: 1.5rem;
   margin-bottom: ${(props) => (props.username ? '1rem' : '')};
   text-transform: uppercase;
   background-color: inherit;
@@ -9,11 +10,9 @@ export const ProfileInput = styled.input`
   border: none;
   width: 100%;
   color: ${(props) =>
-    props.username
-      ? props.theme.colors.quaternary
-      : props.theme.colors.accentSecond};
+    props.username ? props.theme.colors.primary : props.theme.colors.secondary};
   font-size: ${(props) =>
-    props.username ? props.theme.fontSize.xxl : props.theme.fontSize.xl};
+    props.username ? props.theme.fontSize.xxl : props.theme.fontSize.lg};
   &:hover,
   &:focus {
     color: ${(props) => props.theme.colors.white};
