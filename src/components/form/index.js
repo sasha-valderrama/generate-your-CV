@@ -1,39 +1,39 @@
-import React, { useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import { OuterContainer } from './OuterContainer';
 import { MainForm } from './MainForm';
 import Heading from './heading';
-import { NewValues } from '../../data';
+import { newValues } from '../../data';
 import { reducer } from '../../util/reducer';
 import About from './section/About';
 import Section, { SectionListItem } from './section/Section';
 import { BodyWrapper } from './body/BodyWrapper';
 
 export default function Form() {
-  const [{ profile, about, experience }, dispatch] = useReducer(
-    reducer,
-    NewValues
-  );
+  const [{ profile, about }, dispatch] = useReducer(reducer, newValues);
 
   const handleChangeProfile = (e) => {
     console.log(profile);
     dispatch({
       type: 'UPDATE_PROFILE',
       payload: { key: e.target.name, value: e.target.value },
+      profile: profile,
     });
-    console.log(profile);
   };
 
-  const testing = ['abc', 'dfsdfdsf', 'dfsdfsf'];
-  const testingEducation = [
-    'abc',
-    'dfe4sdfdsf',
-    'abc',
-    'dfsdf7dsf',
-    'abc',
-    'dfsd8fdsf',
-    'dfsdfs8f',
-  ];
-  const testingSkills = ['Office', 'fvkfmkvmf', 'dfsdfsf', 'dfsdfsf'];
+  const handleChangeAbout = (e) => {
+    dispatch({
+      type: 'UPDATE_ABOUT',
+      payload: { key: 'description', value: e.target.value },
+      about: about,
+    });
+    console.log(about);
+  };
+
+  const testing = ['abc', 'df', 'fsf'];
+
+  const testingEducation = ['abc', 'dfe', 'etg', 'tzt'];
+  const testingSkills = ['1', '2', '3', '4'];
+
   const testingLanguage = ['German', 'Spanish', 'English'];
 
   return (
@@ -50,7 +50,10 @@ export default function Form() {
           url={profile.url}
           onChangeProfile={handleChangeProfile}
         ></Heading>
-        <About about={about}></About>
+        <About
+          about={about.description}
+          onChangeAbout={handleChangeAbout}
+        ></About>
         <BodyWrapper>
           <Section subtitle="Experience">
             {testing.map((item) => {

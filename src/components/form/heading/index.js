@@ -31,6 +31,7 @@ export default function Heading({
           name="firstName"
           id="firstName"
           placeholder="Your first Name"
+          maxLength="12"
           value={firstName}
           onChange={(e) => onChangeProfile(e)}
         />
@@ -40,6 +41,7 @@ export default function Heading({
           name="lastName"
           id="lastName"
           placeholder="Your last Name"
+          maxLength="12"
           value={lastName}
           onChange={(e) => onChangeProfile(e)}
         />
@@ -48,6 +50,7 @@ export default function Heading({
           name="jobPosition"
           id="jobPosition"
           placeholder="Position you applying for"
+          maxLength="27"
           value={jobPosition}
           onChange={(e) => onChangeProfile(e)}
         />
@@ -60,6 +63,7 @@ export default function Heading({
             name="phone"
             id="phone"
             placeholder="+49 1573 75 133 68"
+            maxLength="30"
             value={phone}
             onChange={(e) => onChangeProfile(e)}
           />
@@ -71,6 +75,7 @@ export default function Heading({
             name="email"
             id="email"
             placeholder="profesional_email@gmail.com"
+            maxLength="30"
             value={email}
             onChange={(e) => onChangeProfile(e)}
           />
@@ -82,6 +87,7 @@ export default function Heading({
             name="address"
             id="address"
             placeholder="City, Country"
+            maxLength="30"
             value={address}
             onChange={(e) => onChangeProfile(e)}
           />
@@ -93,6 +99,7 @@ export default function Heading({
             name="url"
             id="id"
             placeholder="github.com/sasha-valderrama"
+            maxLength="30"
             value={url}
             onChange={(e) => onChangeProfile(e)}
           />

@@ -3,7 +3,18 @@ export const reducer = (state, action) => {
     case 'UPDATE_PROFILE':
       return {
         ...state,
-        [action.payload.key]: action.payload.value,
+        profile: {
+          ...state.profile,
+          [action.payload.key]: action.payload.value,
+        },
+      };
+    case 'UPDATE_ABOUT':
+      return {
+        ...state,
+        about: {
+          ...state.about,
+          [action.payload.key]: action.payload.value,
+        },
       };
     default:
       throw new Error(`Unknown action type: ${action.type}`);

@@ -2,9 +2,18 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { standardBorderRadius } from '../../../util/utilities';
 
-export default function About({ about }) {
+export default function About({ about, onChangeAbout }) {
   return (
-    <AboutWrapper rows="3" wrap="hard" maxLength="175">
+    <AboutWrapper
+      rows="3"
+      wrap="hard"
+      maxLength="175"
+      onChange={(e) => onChangeAbout(e)}
+      name="about"
+      id="about"
+      value={about}
+      placeholder="Write a short description about yourself..."
+    >
       {about}
     </AboutWrapper>
   );
