@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from 'react';
+import React, { useReducer } from 'react';
 import { OuterContainer } from './OuterContainer';
 import { MainForm } from './MainForm';
 import Heading from './heading';
@@ -7,6 +7,7 @@ import { reducer } from '../../util/reducer';
 import About from './section/About';
 import Section, { SectionListItem } from './section/Section';
 import { BodyWrapper } from './body/BodyWrapper';
+import { nanoid } from 'nanoid';
 
 export default function Form() {
   const [{ profile, about }, dispatch] = useReducer(reducer, newValues);
@@ -57,22 +58,22 @@ export default function Form() {
         <BodyWrapper>
           <Section subtitle="Experience">
             {testing.map((item) => {
-              return <SectionListItem key={item}>{item}</SectionListItem>;
+              return <SectionListItem key={nanoid()}>{item}</SectionListItem>;
             })}
           </Section>
           <Section right subtitle="Education">
             {testingEducation.map((item) => {
-              return <SectionListItem key={item}>{item}</SectionListItem>;
+              return <SectionListItem key={nanoid()}>{item}</SectionListItem>;
             })}
           </Section>
           <Section subtitle="Languages">
             {testingLanguage.map((item) => {
-              return <SectionListItem key={item}>{item}</SectionListItem>;
+              return <SectionListItem key={nanoid()}>{item}</SectionListItem>;
             })}
           </Section>
           <Section right subtitle="Skills">
             {testingSkills.map((item) => {
-              return <SectionListItem key={item}>{item}</SectionListItem>;
+              return <SectionListItem key={nanoid()}>{item}</SectionListItem>;
             })}
           </Section>
         </BodyWrapper>

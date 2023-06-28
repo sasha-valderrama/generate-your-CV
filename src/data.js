@@ -41,6 +41,11 @@ export const newValues = {
       to: '',
     },
   ],
+  languages: [
+    { id: '', language: '', level: '' },
+    { id: '', language: '', level: '' },
+    { id: '', language: '', level: '' },
+  ],
 };
 
 // export const defaultValues = {

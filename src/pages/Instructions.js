@@ -4,19 +4,20 @@ import { Button } from '../components/ui/Button';
 import { Link } from 'react-router-dom';
 import { Message, MessageBox, MessageTitle } from '../components/ui/MessageBox';
 import { wave } from '../util/keyframes';
+import { nanoid } from 'nanoid';
 
 const listOfInstructions = [
   {
-    id: '165',
+    id: nanoid(),
     instruction:
       'Click on the Edit to start updating your resume and submit them.',
   },
-  { id: '198', instruction: 'If you some inspiration click on "EXAMPLE".' },
+  { id: nanoid(), instruction: 'If you some inspiration click on "EXAMPLE".' },
   {
-    id: '168',
+    id: nanoid(),
     instruction: 'Click on SAVE to download a PDF version of your resume.',
   },
-  { id: '256', instruction: 'Click on RESET if you need to start over.' },
+  { id: nanoid(), instruction: 'Click on RESET if you need to start over.' },
 ];
 
 export default function Instructions() {
