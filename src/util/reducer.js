@@ -16,6 +16,19 @@ export const reducer = (state, action) => {
           [action.payload.key]: action.payload.value,
         },
       };
+    case 'UPDATE_LANGUAGES':
+      return {
+        ...state,
+        languages: state.languages.map((language) => {
+          if (language.id === action.payload.id) {
+            return {
+              ...language,
+              [action.payload.key]: action.payload.value,
+            };
+          }
+          return language;
+        }),
+      };
     default:
       throw new Error(`Unknown action type: ${action.type}`);
   }

@@ -34,6 +34,7 @@ const Subtitle = styled.h2`
   text-align: center;
   position: relative;
   right: 1.5rem;
+  margin-bottom: 2rem;
   background-color: ${(props) => props.theme.colors.accentThird};
   color: ${(props) => props.theme.colors.black};
   font-weight: bold;
@@ -48,6 +49,7 @@ const SectionListWrapper = styled.ul`
 export const SectionListItem = styled.li`
   color: ${(props) => props.theme.colors.black};
   font-size: ${(props) => props.theme.fontSize.md};
-  line-height: 1.5;
+  line-height: 1.2;
   margin: 0.6rem;
+  margin-left: 1rem;
 `;

@@ -1,3 +1,5 @@
+import { nanoid } from 'nanoid';
+
 export const exampleUser = {
   firstName: 'Sasha',
   lastName: 'Valderrama',
@@ -42,9 +44,13 @@ export const newValues = {
     },
   ],
   languages: [
-    { id: '', language: '', level: '' },
-    { id: '', language: '', level: '' },
-    { id: '', language: '', level: '' },
+    { id: nanoid(), langName: 'English', proficiency: 'Native' },
+    // { id: '', langName: '', proficiency: '' },
+    // {
+    //   id: '',
+    //   langName: '',
+    //   proficiency: '',
+    // },
   ],
 };
 
@@ -76,6 +82,15 @@ export const newValues = {
 //       company: ' ',
 //       from: '',
 //       to: '',
+//     },
+//   ],
+// languages: [
+//     { id: nanoid(), langName: 'English', proficiency: 'Native' },
+//     { id: nanoid(), langName: 'Spanish', proficiency: 'Bilingual Proficiency' },
+//     {
+//       id: nanoid(),
+//       langName: 'German',
+//       proficiency: 'Full Professional Proficiency',
 //     },
 //   ],
 // };

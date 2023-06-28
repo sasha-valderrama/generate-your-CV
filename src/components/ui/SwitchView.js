@@ -27,7 +27,7 @@ const lateralButton = styled.div`
   }
 `;
 
-export const Edit = styled(lateralButton)`
+export const SwitchView = styled(lateralButton)`
   color: ${(props) => props.theme.colors.black};
   background-color: ${(props) => props.theme.colors.neutral};
 `;

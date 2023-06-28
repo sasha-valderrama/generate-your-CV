@@ -36,4 +36,9 @@ const AboutWrapper = styled.textarea`
   ${standardBorderRadius};
   box-shadow: ${(props) => `5px 5px 0 ${props.theme.colors.white}`};
   resize: none;
+  &:hover,
+  &:focus {
+    color: ${(props) => props.theme.colors.white};
+    outline: none;
+  }
 `;

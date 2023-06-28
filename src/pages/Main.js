@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { Edit } from '../components/ui/Edit';
+import { SwitchView } from '../components/ui/SwitchView';
 import { Outlet, useNavigate } from 'react-router-dom';
 
 export default function Main() {
@@ -15,13 +15,13 @@ export default function Main() {
 
   return (
     <MainContainer>
-      <Edit left onClick={showExample}>
+      <SwitchView left onClick={showExample}>
         EXAMPLE
-      </Edit>
+      </SwitchView>
       <Outlet />
-      <Edit right onClick={showUpdate}>
+      <SwitchView right onClick={showUpdate}>
         UPDATE
-      </Edit>
+      </SwitchView>
     </MainContainer>
   );
 }
