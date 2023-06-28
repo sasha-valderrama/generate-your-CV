@@ -1,14 +1,15 @@
 import React from 'react';
-import { HeadingContainer } from './HeadingContainer';
-import { ProfileContainer } from './ProfileContainer';
-import { ProfileInput } from './ProfileInput';
-import { ContactContainer } from './ContactContainer';
-import { ContactItem, ContactWrapper } from './ContactItem';
-import { ProfilePic } from './ProfilePic';
 import { MdPhone } from 'react-icons/md';
 import { MdEmail } from 'react-icons/md';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import { GiSpiderWeb } from 'react-icons/gi';
+import { ContactContainer, ContactItem, ContactWrapper } from './contact';
+import {
+  HeadingContainer,
+  ProfileContainer,
+  ProfileInput,
+  ProfilePic,
+} from './profile';
 
 export default function Heading({
   firstName,
@@ -23,13 +24,6 @@ export default function Heading({
   return (
     <HeadingContainer>
       <ProfilePic src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" />
-      {/* <ProfilePic
-        type="file"
-        id="picture"
-        name="picture"
-        accept="image/png, image/jpeg"
-        onChange={(e) => onChangeProfile(e)}
-      /> */}
       <ProfileContainer>
         <ProfileInput
           username

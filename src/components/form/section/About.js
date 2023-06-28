@@ -1,14 +1,17 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { standardBorderRadius } from '../../util/utilities';
+import { standardBorderRadius } from '../../../util/utilities';
 
 export default function About({ about }) {
-  return <AboutWrapper>{about}</AboutWrapper>;
+  return (
+    <AboutWrapper rows="3" wrap="hard" maxLength="175">
+      {about}
+    </AboutWrapper>
+  );
 }
 
-const AboutWrapper = styled.div`
+const AboutWrapper = styled.textarea`
   position: relative;
-  // z-index: 0;
   display: flex;
   margin-top: 2rem;
   padding: 0.8rem 1rem;
@@ -23,4 +26,5 @@ const AboutWrapper = styled.div`
   font-size: ${(props) => props.theme.fontSize.md};
   ${standardBorderRadius};
   box-shadow: ${(props) => `5px 5px 0 ${props.theme.colors.white}`};
+  resize: none;
 `;

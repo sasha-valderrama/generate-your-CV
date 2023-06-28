@@ -2,33 +2,36 @@ import React, { useReducer } from 'react';
 import { OuterContainer } from './OuterContainer';
 import { MainForm } from './MainForm';
 import Heading from './heading';
-import { initialArg } from '../../data';
+import { NewValues } from '../../data';
 import { reducer } from '../../util/reducer';
-import About from './About';
+import About from './section/About';
 import Section, { SectionListItem } from './section/Section';
 import { BodyWrapper } from './body/BodyWrapper';
 
 export default function Form() {
-  const [state, dispatch] = useReducer(reducer, initialArg);
+  const [{ profile, about, experience }, dispatch] = useReducer(
+    reducer,
+    NewValues
+  );
 
   const handleChangeProfile = (e) => {
-    console.log(state);
+    console.log(profile);
     dispatch({
       type: 'UPDATE_PROFILE',
       payload: { key: e.target.name, value: e.target.value },
     });
-    console.log(state);
+    console.log(profile);
   };
 
   const testing = ['abc', 'dfsdfdsf', 'dfsdfsf'];
   const testingEducation = [
     'abc',
-    'dfsdfdsf',
+    'dfe4sdfdsf',
     'abc',
-    'dfsdfdsf',
+    'dfsdf7dsf',
     'abc',
-    'dfsdfdsf',
-    'dfsdfsf',
+    'dfsd8fdsf',
+    'dfsdfs8f',
   ];
   const testingSkills = ['Office', 'fvkfmkvmf', 'dfsdfsf', 'dfsdfsf'];
   const testingLanguage = ['German', 'Spanish', 'English'];
@@ -37,17 +40,17 @@ export default function Form() {
     <OuterContainer>
       <MainForm>
         <Heading
-          firstName={state.firstName}
-          lastName={state.lastName}
-          jobPosition={state.jobPosition}
-          picture={state.picture}
-          phone={state.phone}
-          email={state.email}
-          address={state.address}
-          url={state.url}
+          firstName={profile.firstName}
+          lastName={profile.lastName}
+          jobPosition={profile.jobPosition}
+          picture={profile.picture}
+          phone={profile.phone}
+          email={profile.email}
+          address={profile.address}
+          url={profile.url}
           onChangeProfile={handleChangeProfile}
         ></Heading>
-        <About about="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tempus imperdiet nisl sed vestibulum. Donec gravida, nulla eget blandit fermentum, mauris nisi rutrum libero, ac pharetra erat est siAenean et metus."></About>
+        <About about={about}></About>
         <BodyWrapper>
           <Section subtitle="Experience">
             {testing.map((item) => {
