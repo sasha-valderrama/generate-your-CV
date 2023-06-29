@@ -5,9 +5,8 @@ import Heading from './heading';
 import { initialState } from '../../data';
 import { reducer } from '../../util/reducer';
 import About from './sections/About';
-import Section, { SectionListItem } from './sections/Section';
+import Section from './sections/Section';
 import { BodyWrapper } from './body/BodyWrapper';
-import { nanoid } from 'nanoid';
 import Language from './sections/Language';
 import Skill from './sections/Skills';
 import Experience from './sections/Experience';
@@ -17,22 +16,19 @@ export default function Form() {
     useReducer(reducer, initialState);
 
   const handleChangeProfile = (e) => {
-    // console.log(profile);
     dispatch({
       type: 'UPDATE_PROFILE',
       payload: { key: e.target.name, value: e.target.value },
       profile: profile,
     });
-    // console.log(profile);
   };
-  // console.log(profile);
+
   const handleChangeAbout = (e) => {
     dispatch({
       type: 'UPDATE_ABOUT',
       payload: { key: 'description', value: e.target.value },
       about: about,
     });
-    // console.log(about);
   };
   const handleChangeExperiences = (id, key, value) => {
     dispatch({
@@ -67,12 +63,9 @@ export default function Form() {
       skills: skills,
     });
   };
-
-  
-  // const testingEducation = ['abc', 'dfe', 'etg', 'tzt'];
   // console.log(profile);     //Updates!!!
   // console.log(about);       //Updates!!!
-  // console.log(experiences); //
+  // console.log(experiences); //Update!!!
   // console.log(education);   //
   // console.log(languages);   //Updates!!!
   // console.log(skills);      // Updates!!!
@@ -95,16 +88,17 @@ export default function Form() {
           onChangeAbout={handleChangeAbout}
         ></About>
         <BodyWrapper>
-          <Section subtitle="Experience"></Section>
-          {experiences.map((experience) => {
-            return (
-              <Experience
-                key={experience.id}
-                experience={experience}
-                onChangeExperiences={handleChangeExperiences}
-              />
-            );
-          })}
+          <Section subtitle="Experience">
+            {experiences.map((experience) => {
+              return (
+                <Experience
+                  key={experience.id}
+                  experience={experience}
+                  onChangeExperiences={handleChangeExperiences}
+                />
+              );
+            })}
+          </Section>
           {/* <Section right subtitle="Education">
             {testingEducation.map((item) => {
               return <SectionListItem key={nanoid()}>{item}</SectionListItem>;
