@@ -29,6 +29,19 @@ export const reducer = (state, action) => {
           return experience;
         }),
       };
+    case 'UPDATE_EDUCATION':
+      return {
+        ...state,
+        education: state.education.map((item) => {
+          if (item.id === action.payload.id) {
+            return {
+              ...item,
+              [action.payload.key]: action.payload.value,
+            };
+          }
+          return item;
+        }),
+      };
     case 'UPDATE_LANGUAGES':
       return {
         ...state,

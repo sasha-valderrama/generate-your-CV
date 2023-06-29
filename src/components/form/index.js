@@ -10,10 +10,13 @@ import { BodyWrapper } from './body/BodyWrapper';
 import Language from './sections/Language';
 import Skill from './sections/Skills';
 import Experience from './sections/Experience';
+import EducationItem from './sections/EducationItem';
 
 export default function Form() {
-  const [{ profile, about, experiences, languages, skills }, dispatch] =
-    useReducer(reducer, initialState);
+  const [
+    { profile, about, experiences, education, languages, skills },
+    dispatch,
+  ] = useReducer(reducer, initialState);
 
   const handleChangeProfile = (e) => {
     dispatch({
@@ -30,9 +33,21 @@ export default function Form() {
       about: about,
     });
   };
+
   const handleChangeExperiences = (id, key, value) => {
     dispatch({
       type: 'UPDATE_EXPERIENCES',
+      payload: {
+        id,
+        key,
+        value,
+      },
+    });
+  };
+
+  const handleChangeEducation = (id, key, value) => {
+    dispatch({
+      type: 'UPDATE_EDUCATION',
       payload: {
         id,
         key,
@@ -66,7 +81,7 @@ export default function Form() {
   // console.log(profile);     //Updates!!!
   // console.log(about);       //Updates!!!
   // console.log(experiences); //Update!!!
-  // console.log(education);   //
+  console.log(education); //
   // console.log(languages);   //Updates!!!
   // console.log(skills);      // Updates!!!
   return (
@@ -99,11 +114,17 @@ export default function Form() {
               );
             })}
           </Section>
-          {/* <Section right subtitle="Education">
-            {testingEducation.map((item) => {
-              return <SectionListItem key={nanoid()}>{item}</SectionListItem>;
+          <Section right subtitle="Education">
+            {education.map((item) => {
+              return (
+                <EducationItem
+                  key={item.id}
+                  item={item}
+                  onChangeEducation={handleChangeEducation}
+                />
+              );
             })}
-          </Section> handleChangeExperience*/}
+          </Section>
           <Section subtitle="Languages">
             {languages.map((language) => {
               return (

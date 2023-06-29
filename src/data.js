@@ -56,6 +56,32 @@ export const newValues = {
       description: '',
     },
   ],
+  education: [
+    {
+      id: nanoid(5),
+      from: '',
+      to: '',
+      university: '',
+      degree: '',
+      subject: '',
+    },
+    {
+      id: nanoid(5),
+      from: '',
+      to: '',
+      university: '',
+      degree: '',
+      subject: '',
+    },
+    {
+      id: nanoid(5),
+      from: '',
+      to: '',
+      university: '',
+      degree: '',
+      subject: '',
+    },
+  ],
   languages: [
     { id: nanoid(5), langName: '', proficiency: '' },
     { id: nanoid(5), langName: '', proficiency: '' },
@@ -78,6 +104,7 @@ export const initialState = {
   profile: newValues.profile,
   about: newValues.about,
   experiences: newValues.experiences,
+  education: newValues.education,
   languages: newValues.languages,
   skills: newValues.skills,
 };
