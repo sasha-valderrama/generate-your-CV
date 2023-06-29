@@ -13,8 +13,9 @@ ${standardBorder};
   background-color: ${(props) => props.theme.colors.quaternary};
   border-radius: ${(props) =>
     props.primary ? '10px 10px 0px 10px' : '10px 10px 10px 0px'};
-
-  &:hover,&:focus{
+    
+  &:hover, 
+  &:focus{
     color: ${(props) =>
       props.primary ? props.theme.colors.tertiary : props.theme.colors.primary};
     background-color: ${(props) =>

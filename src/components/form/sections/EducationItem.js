@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { BsDash } from 'react-icons/bs';
-import { defaultInput } from '../../../util/utilities';
+import { defaultInput, flexColumn } from '../../../util/utilities';
 
 export default function EducationItem({ item, onChangeEducation }) {
   const handleFromChange = (e) => {
@@ -85,12 +85,11 @@ export default function EducationItem({ item, onChangeEducation }) {
 }
 
 const EducationWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  height: fit-content;
+  ${flexColumn};
   justify-content: flex-start;
   gap: 1rem;
+  width: fit-content;
+  height: fit-content;
   margin-bottom: 2rem;
 `;
 

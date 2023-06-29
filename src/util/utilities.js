@@ -30,10 +30,22 @@ export const defaultTextarea = styled.textarea`
   }
 `;
 
+export const flexColumn = css`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const centerContent = css`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const centerContentInColumn = css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 export const centerSpaceAround = css`
@@ -48,4 +60,13 @@ export const standardBorderRadius = css`
 
 export const standardBorder = css`
   border: 4px solid #000;
+`;
+
+export const thinBorder = css`
+  border: 3px solid #000;
+`;
+
+export const marginAuto = css`
+  margin-left: auto;
+  margin-right: auto;
 `;

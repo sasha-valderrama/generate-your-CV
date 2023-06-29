@@ -79,7 +79,7 @@ export default function Form() {
     });
   };
   // console.log(profile);     //Updates!!!
-  // console.log(about);       //Updates!!!
+  // console.log(about); //Updates!!!
   // console.log(experiences); //Update!!!
   // console.log(education);   //Update!!!
   // console.log(languages);   //Updates!!!

@@ -6,19 +6,20 @@ import {
 } from '../../util/utilities';
 
 const lateralButton = styled.div`
+  position: sticky;
+  top: 10rem;
   ${standardBorder};
   ${standardBorderRadius};
+  ${centerContent};
   width: 3rem;
   height: fit-content;
   padding: 0.8rem 0.2rem;
-  position: sticky;
-  top: 10rem;
   color: ${(props) => props.theme.colors.black};
   font-weight: bold;
   background-color: ${(props) => props.theme.colors.neutral};
   writing-mode: vertical-rl;
   text-orientation: upright;
-  ${centerContent};
+
   &:hover,
   &:focus {
     background-color: ${(props) => props.theme.colors.accentSecond};

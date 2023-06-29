@@ -17,14 +17,13 @@ export default function Navigation() {
 }
 
 const NavigationStyled = styled.div`
+  position: relative;
   ${centerContent}
   justify-content: space-around;
   width: 100vw;
   height: 8rem;
   background-color: ${(props) => props.theme.colors.quaternary};
   border-bottom: 4px solid ${(props) => props.theme.colors.black};
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  position: relative;
 `;
 
 const Title = styled.h1`

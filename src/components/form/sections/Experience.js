@@ -1,8 +1,11 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { BsDash } from 'react-icons/bs';
-import { defaultInput, defaultTextarea } from '../../../util/utilities';
-
+import {
+  defaultInput,
+  defaultTextarea,
+  flexColumn,
+} from '../../../util/utilities';
 
 export default function Experience({ experience, onChangeExperiences }) {
   const handleFromChange = (e) => {
@@ -96,8 +99,7 @@ export default function Experience({ experience, onChangeExperiences }) {
 }
 
 const ExperienceWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${flexColumn};
   width: fit-content;
   height: fit-content;
   justify-content: flex-start;
@@ -106,9 +108,9 @@ const ExperienceWrapper = styled.div`
 
 const HeadingWrapper = styled.div`
   display: flex;
-  width: 280px;
   justify-content: space-between;
   gap: 1.2rem;
+  width: 280px;
   font-weight: bold;
 `;
 

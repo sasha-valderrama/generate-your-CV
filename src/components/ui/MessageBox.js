@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import {
   centerContent,
+  flexColumn,
   standardBorder,
   standardBorderRadius,
 } from '../../util/utilities';
@@ -9,12 +10,12 @@ export const MessageBox = styled.div`
   ${standardBorder};
   ${standardBorderRadius};
   ${centerContent};
+  ${flexColumn};
   width: 45rem;
   height: fit-content;
   gap: 1.5rem;
-  background-color: ${(props) => props.theme.colors.accent};
-  flex-direction: column;
   padding: 1rem;
+  background-color: ${(props) => props.theme.colors.accent};
 `;
 
 export const MessageTitle = styled.h2`

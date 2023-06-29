@@ -1,44 +1,45 @@
 import styled from '@emotion/styled';
-import { standardBorderRadius } from '../../../util/utilities';
+import {
+  marginAuto,
+  standardBorderRadius,
+  thinBorder,
+} from '../../../util/utilities';
 import { defaultInput } from '../../../util/utilities';
 
 export const HeadingContainer = styled.div`
   position: relative;
-  display: flex;
-  margin-top: 2rem;
-  padding: 0.8rem 2rem;
   width: 75%;
   height: fit-content;
+  margin-top: 2rem;
   margin-left: auto;
   margin-right: 3rem;
-  border: 3px solid ${(props) => props.theme.colors.black};
-  background-color: ${(props) => props.theme.colors.accentThird};
-  box-shadow: ${(props) => `-5px 5px 0 ${props.theme.colors.white}`};
+  padding: 0.8rem 2rem;
+  ${thinBorder};
   ${standardBorderRadius};
+  box-shadow: ${(props) => `-5px 5px 0 ${props.theme.colors.white}`};
+  background-color: ${(props) => props.theme.colors.accentThird};
 `;
 
 export const ProfileContainer = styled.div`
   position: relative;
-  z-index: 999;
   left: 0.5rem;
+  z-index: 999;
+  ${marginAuto};
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  margin-top: auto;
-  margin-bottom: auto;
 `;
 
 export const ProfilePic = styled.img`
   position: absolute;
   left: -21.5%;
   top: 2.5rem;
-  margin-top: auto;
-  margin-bottom: auto;
   width: 180px;
   height: 250px;
+  ${marginAuto};
   ${standardBorderRadius};
-  border: 3px solid ${(props) => props.theme.colors.black};
-  background-color: ${(props) => props.theme.colors.accent};
+  ${thinBorder};
   box-shadow: ${(props) => `-5px 5px 0 ${props.theme.colors.white}`};
+  background-color: ${(props) => props.theme.colors.accent};
 `;
 
 export const ProfileInput = styled(defaultInput)`

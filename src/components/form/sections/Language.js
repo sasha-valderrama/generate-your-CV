@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { TbPoint } from 'react-icons/tb';
-import { defaultInput } from '../../../util/utilities';
+import { centerContentInColumn, defaultInput } from '../../../util/utilities';
 
 export default function Language({ language, onChangeLanguages }) {
   const handleNameChange = (e) => {
@@ -41,11 +41,9 @@ export default function Language({ language, onChangeLanguages }) {
 }
 
 const LanguageWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${centerContentInColumn};
   width: fit-content;
   height: fit-content;
-  justify-content: flex-start;
   gap: 0.3rem;
 `;
 
