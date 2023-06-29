@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { standardBorderRadius } from '../../../util/utilities';
+import { defaultTextarea } from '../../../util/utilities';
 
 export default function About({ about, onChangeAbout }) {
   return (
@@ -19,7 +20,7 @@ export default function About({ about, onChangeAbout }) {
   );
 }
 
-const AboutWrapper = styled.textarea`
+const AboutWrapper = styled(defaultTextarea)`
   position: relative;
   display: flex;
   margin-top: 2rem;
@@ -31,14 +32,7 @@ const AboutWrapper = styled.textarea`
   line-height: 1.5;
   border: 3px solid ${(props) => props.theme.colors.black};
   background-color: ${(props) => props.theme.colors.neutralSecond};
-  color: ${(props) => props.theme.colors.black};
   font-size: ${(props) => props.theme.fontSize.md};
   ${standardBorderRadius};
   box-shadow: ${(props) => `5px 5px 0 ${props.theme.colors.white}`};
-  resize: none;
-  &:hover,
-  &:focus {
-    color: ${(props) => props.theme.colors.white};
-    outline: none;
-  }
 `;

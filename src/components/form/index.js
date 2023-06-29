@@ -1,16 +1,16 @@
 import React, { useReducer } from 'react';
-import { OuterContainer } from './OuterContainer';
-import { MainForm } from './MainForm';
 import Heading from './heading';
 import { initialState } from '../../data';
 import { reducer } from '../../util/reducer';
 import About from './sections/About';
 import Section from './sections/Section';
-import { BodyWrapper } from './body/BodyWrapper';
+import { BodyWrapper } from './sections/BodyWrapper';
 import Language from './sections/Language';
 import Skill from './sections/Skills';
 import Experience from './sections/Experience';
 import EducationItem from './sections/EducationItem';
+import styled from '@emotion/styled';
+import { standardBorderRadius } from '../../util/utilities';
 
 export default function Form() {
   const [
@@ -81,7 +81,7 @@ export default function Form() {
   // console.log(profile);     //Updates!!!
   // console.log(about);       //Updates!!!
   // console.log(experiences); //Update!!!
-  console.log(education); //
+  // console.log(education);   //Update!!!
   // console.log(languages);   //Updates!!!
   // console.log(skills);      // Updates!!!
   return (
@@ -152,3 +152,19 @@ export default function Form() {
     </OuterContainer>
   );
 }
+
+const MainForm = styled.form`
+  // position: relative;
+  // z-index: 999;
+  display: flex;
+  flex-direction: column;
+  width: 210mm;
+  height: fit-content;
+  background-color: ${(props) => props.theme.colors.quaternary};
+`;
+
+const OuterContainer = styled.div`
+  border: 4px solid ${(props) => props.theme.colors.black};
+  ${standardBorderRadius};
+  padding: 1rem;
+`;

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { SectionListItem } from './Section';
 import { TbPoint } from 'react-icons/tb';
+import { defaultInput } from '../../../util/utilities';
 
 export default function Language({ language, onChangeLanguages }) {
   const handleNameChange = (e) => {
@@ -15,30 +15,28 @@ export default function Language({ language, onChangeLanguages }) {
   };
 
   return (
-    <SectionListItem>
-      <LanguageWrapper>
-        <div>
-          <TbPoint />
-          <LanguageItem
-            left
-            type="text"
-            id={`${language.langName}-name`}
-            name={language.langName}
-            value={language.langName}
-            onChange={(e) => handleNameChange(e)}
-            placeholder="Language name"
-          ></LanguageItem>
-        </div>
+    <LanguageWrapper>
+      <div>
+        <TbPoint />
         <LanguageItem
+          left
           type="text"
-          id={`${language.langName}-proficiency`}
-          name={language.proficiency}
-          value={language.proficiency}
-          onChange={(e) => handleProficiencyChange(e)}
-          placeholder="Proficiency level"
+          id={`${language.langName}-name`}
+          name={language.langName}
+          value={language.langName}
+          onChange={(e) => handleNameChange(e)}
+          placeholder="Language name"
         ></LanguageItem>
-      </LanguageWrapper>
-    </SectionListItem>
+      </div>
+      <LanguageItem
+        type="text"
+        id={`${language.langName}-proficiency`}
+        name={language.proficiency}
+        value={language.proficiency}
+        onChange={(e) => handleProficiencyChange(e)}
+        placeholder="Proficiency level"
+      ></LanguageItem>
+    </LanguageWrapper>
   );
 }
 
@@ -51,19 +49,7 @@ const LanguageWrapper = styled.div`
   gap: 0.3rem;
 `;
 
-const LanguageItem = styled.input`
-  border: none;
-  background-color: inherit;
-  font-size: inherit;
+const LanguageItem = styled(defaultInput)`
   width: ${(props) => (props.left ? '220px' : '260px')};
   font-weight: ${(props) => (props.left ? 'bold' : 'normal')};
-  color: ${(props) => props.theme.colors.black};
-  &:hover,
-  &:focus {
-    color: ${(props) => props.theme.colors.white};
-    outline: none;
-  }
-  ::placeholder {
-    font-size: ${(props) => props.theme.fontSize.md};
-  }
 `;

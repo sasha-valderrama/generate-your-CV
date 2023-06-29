@@ -1,7 +1,7 @@
 import React from 'react';
-import { SectionListItem } from './Section';
 import styled from '@emotion/styled';
 import { BsDash } from 'react-icons/bs';
+import { defaultInput } from '../../../util/utilities';
 
 export default function EducationItem({ item, onChangeEducation }) {
   const handleFromChange = (e) => {
@@ -28,39 +28,38 @@ export default function EducationItem({ item, onChangeEducation }) {
   };
 
   return (
-    <SectionListItem>
-      <EducationWrapper>
-        <HeadingWrapper>
-          <YearsWrapper>
-            <EducationYear
-              left
-              type="text"
-              id={`${item.id}-from`}
-              name="from"
-              value={item.from}
-              onChange={(e) => handleFromChange(e)}
-              placeholder="FROM"
-            />
-            <BsDash />
-            <EducationYear
-              type="text"
-              id={`${item.id}-to`}
-              name="to"
-              value={item.to}
-              onChange={(e) => handleToChange(e)}
-              placeholder="TO"
-            />
-          </YearsWrapper>
-          <EducationInput
-            right
-            type="text"
-            id={`${item.id}-university`}
-            name="university"
-            value={item.university}
-            onChange={(e) => handleUniversityChange(e)}
-            placeholder="University"
-          />
-        </HeadingWrapper>
+    <EducationWrapper>
+      <YearsWrapper>
+        <EducationYear
+          left
+          type="text"
+          id={`${item.id}-from`}
+          name="from"
+          value={item.from}
+          onChange={(e) => handleFromChange(e)}
+          placeholder="FROM"
+        />
+        <BsDash />
+        <EducationYear
+          type="text"
+          id={`${item.id}-to`}
+          name="to"
+          value={item.to}
+          onChange={(e) => handleToChange(e)}
+          placeholder="TO"
+        />
+      </YearsWrapper>
+      <EducationInput
+        university
+        type="text"
+        id={`${item.id}-university`}
+        name="university"
+        value={item.university}
+        onChange={(e) => handleUniversityChange(e)}
+        placeholder="University"
+      />
+      <EducationInputWrapper>
+        <div>Degree: </div>
         <EducationInput
           type="text"
           id={`${item.id}-degree`}
@@ -69,6 +68,9 @@ export default function EducationItem({ item, onChangeEducation }) {
           onChange={(e) => handleDegreeChange(e)}
           placeholder="Degree"
         />
+      </EducationInputWrapper>
+      <EducationInputWrapper>
+        <div>Subject: </div>
         <EducationInput
           type="text"
           id={`${item.id}-subject`}
@@ -77,8 +79,8 @@ export default function EducationItem({ item, onChangeEducation }) {
           onChange={(e) => handleSubjectChange(e)}
           placeholder="Subject"
         />
-      </EducationWrapper>
-    </SectionListItem>
+      </EducationInputWrapper>
+    </EducationWrapper>
   );
 }
 
@@ -88,56 +90,32 @@ const EducationWrapper = styled.div`
   width: fit-content;
   height: fit-content;
   justify-content: flex-start;
-  gap: 0.5rem;
-`;
-
-const HeadingWrapper = styled.div`
-  display: flex;
-  width: 280px;
-  justify-content: space-between;
-  // border: 2px solid blue;
-  gap: 1.2rem;
-  font-weight: bold;
+  gap: 1rem;
+  margin-bottom: 2rem;
 `;
 
 const YearsWrapper = styled.div`
   display: flex;
-  // border: 1px solid red;
   width: fit-content;
 `;
 
-const EducationYear = styled.input`
-  font-weight: bold;
+const EducationYear = styled(defaultInput)`
   width: 50px;
-  background-color: inherit;
-  border: none;
   text-align: ${(props) => (props.left ? 'left' : 'center')};
-  &:hover,
-  &:focus {
-    color: ${(props) => props.theme.colors.white};
-    outline: none;
-  }
   ::placeholder {
     font-size: ${(props) => props.theme.fontSize.sm};
   }
 `;
 
-const EducationInput = styled.input`
-  border: none;
-  background-color: inherit;
-  font-size: inherit;
-  width: 100%;
-  font-weight: bold;
+const EducationInputWrapper = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-top: -0.5rem;
+`;
+
+const EducationInput = styled(defaultInput)`
+  width: ${(props) => (props.university ? '270px' : '100%')};
   text-transform: ${(props) => (props.right ? 'uppercase' : '')};
-  color: ${(props) => props.theme.colors.black};
-  font-size: ${(props) => props.theme.fontSize.sm};
-  text-align: ${(props) => (props.right ? 'right' : 'left')};
-  &:hover,
-  &:focus {
-    color: ${(props) => props.theme.colors.white};
-    outline: none;
-  }
-  ::placeholder {
-    font-size: ${(props) => props.theme.fontSize.md};
-  }
+  font-size: ${(props) =>
+    props.university ? props.theme.fontSize.md : props.theme.fontSize.sm};
 `;

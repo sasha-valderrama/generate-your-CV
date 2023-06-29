@@ -6,7 +6,7 @@ export default function Section({ subtitle, children }) {
   return (
     <SectionWrapper>
       <Subtitle>{subtitle}</Subtitle>
-      <SectionListWrapper>{children}</SectionListWrapper>
+      <SectionListItem>{children}</SectionListItem>
     </SectionWrapper>
   );
 }
@@ -15,7 +15,7 @@ const SectionWrapper = styled.div`
   width: 320px;
   height: fit-content;
   padding: 0.5rem;
-  margin-bottom: 2rem;
+  // margin-bottom: 2rem;
   margin-left: ${(props) => (props.right ? '1rem' : '2rem')};
   margin-right: ${(props) => (props.right ? '1rem' : '2rem')};
   background-color: ${(props) => props.theme.colors.neutralSecond};
@@ -41,15 +41,11 @@ const Subtitle = styled.h2`
   font-size: ${(props) => props.theme.fontSize.lg};
   box-shadow: ${(props) => `-5px 5px 0 ${props.theme.colors.white}`};
 `;
-
-const SectionListWrapper = styled.ul`
-  display: block;
-`;
-
 export const SectionListItem = styled.li`
   color: ${(props) => props.theme.colors.black};
   font-size: ${(props) => props.theme.fontSize.md};
   line-height: 1.2;
   margin: 0.6rem;
   margin-left: 1rem;
+  list-style: none;
 `;

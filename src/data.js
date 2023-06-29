@@ -46,25 +46,8 @@ export const newValues = {
       location: '',
       description: '',
     },
-    {
-      id: nanoid(5),
-      from: '',
-      to: '',
-      position: '',
-      company: '',
-      location: '',
-      description: '',
-    },
   ],
   education: [
-    {
-      id: nanoid(5),
-      from: '',
-      to: '',
-      university: '',
-      degree: '',
-      subject: '',
-    },
     {
       id: nanoid(5),
       from: '',

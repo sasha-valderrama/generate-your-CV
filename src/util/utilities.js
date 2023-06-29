@@ -1,4 +1,34 @@
 import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+
+export const defaultInput = styled.input`
+  background-color: inherit;
+  border: none;
+  font-size: inherit;
+  font-weight: bold;
+  width: 100%;
+  color: ${(props) => props.theme.colors.black};
+  &:hover,
+  &:focus {
+    color: ${(props) => props.theme.colors.white};
+    outline: none;
+  }
+  ::placeholder {
+    font-size: ${(props) => props.theme.fontSize.md};
+  }
+`;
+
+export const defaultTextarea = styled.textarea`
+  background-color: inherit;
+  resize: none;
+  border: none;
+  color: ${(props) => props.theme.colors.black};
+  &:hover,
+  &:focus {
+    color: ${(props) => props.theme.colors.white};
+    outline: none;
+  }
+`;
 
 export const centerContent = css`
   display: flex;
