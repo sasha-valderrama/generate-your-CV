@@ -44,13 +44,20 @@ export const newValues = {
     },
   ],
   languages: [
-    { id: nanoid(), langName: 'English', proficiency: 'Native' },
-    // { id: '', langName: '', proficiency: '' },
-    // {
-    //   id: '',
-    //   langName: '',
-    //   proficiency: '',
-    // },
+    { id: nanoid(), langName: '', proficiency: '' },
+    { id: nanoid(), langName: '', proficiency: '' },
+    {
+      id: nanoid(),
+      langName: '',
+      proficiency: '',
+    },
+  ],
+  skills: [
+    { id: nanoid(), name: 'a' },
+    { id: nanoid(), name: 'b' },
+    { id: nanoid(), name: 'c' },
+    { id: nanoid(), name: 'd' },
+    { id: nanoid(), name: '' },
   ],
 };
 
@@ -93,4 +100,11 @@ export const newValues = {
 //       proficiency: 'Full Professional Proficiency',
 //     },
 //   ],
+// skills: [
+//   { id: nanoid(), skill: 'Project management' },
+//   { id: nanoid(), skill: 'Problem-solving' },
+//   { id: nanoid(), skill: 'Design' },
+//   { id: nanoid(), skill: 'Mobile development' },
+//   { id: nanoid(), skill: 'Data analysis' },
+// ],
 // };

@@ -8,10 +8,11 @@ import About from './sections/About';
 import Section, { SectionListItem } from './sections/Section';
 import { BodyWrapper } from './body/BodyWrapper';
 import { nanoid } from 'nanoid';
-import Language from '../Language';
+import Language from './sections/Language';
+import Skill from './sections/Skills';
 
 export default function Form() {
-  const [{ profile, about, languages }, dispatch] = useReducer(
+  const [{ profile, about, languages, skills }, dispatch] = useReducer(
     reducer,
     newValues
   );
@@ -43,7 +44,18 @@ export default function Form() {
         value,
       },
     });
-    console.log(languages);
+  };
+
+  const handleChangeSkills = (value, id) => {
+    dispatch({
+      type: 'UPDATE_SKILLS',
+      payload: {
+        id,
+        key: 'name',
+        value: value,
+      },
+      skills: skills,
+    });
   };
 
   // const testing = ['abc', 'df', 'fsf'];
@@ -91,11 +103,18 @@ export default function Form() {
               );
             })}
           </Section>
-          {/* <Section right subtitle="Skills">
-            {testingSkills.map((item) => {
-              return <SectionListItem key={nanoid()}>{item}</SectionListItem>;
+          <Section right subtitle="Skills">
+            {skills.map((skill) => {
+              console.log(skill);
+              return (
+                <Skill
+                  key={skill.id}
+                  skill={skill}
+                  onChangeSkills={handleChangeSkills}
+                />
+              );
             })}
-          </Section> */}
+          </Section>
         </BodyWrapper>
       </MainForm>
     </OuterContainer>

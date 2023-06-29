@@ -1,18 +1,19 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { SectionListItem } from './form/sections/Section';
+import { SectionListItem } from './Section';
 import { TbPoint } from 'react-icons/tb';
 
 export default function Language({ language, onChangeLanguages }) {
   const handleNameChange = (e) => {
-    const { id, value } = e.target;
+    const { value } = e.target;
     onChangeLanguages(language.id, 'langName', value);
   };
 
   const handleProficiencyChange = (e) => {
-    const { id, value } = e.target;
+    const { value } = e.target;
     onChangeLanguages(language.id, 'proficiency', value);
   };
+
   return (
     <SectionListItem>
       <LanguageWrapper>

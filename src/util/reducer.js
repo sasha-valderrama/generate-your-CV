@@ -29,6 +29,19 @@ export const reducer = (state, action) => {
           return language;
         }),
       };
+    case 'UPDATE_SKILLS':
+      return {
+        ...state,
+        skills: state.skills.map((skill) => {
+          if (skill.id === action.payload.id) {
+            return {
+              ...skill,
+              [action.payload.key]: action.payload.value,
+            };
+          }
+          return skill;
+        }),
+      };
     default:
       throw new Error(`Unknown action type: ${action.type}`);
   }
