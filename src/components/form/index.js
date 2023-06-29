@@ -1,7 +1,5 @@
-import React, { useReducer } from 'react';
+import React from 'react';
 import Heading from './heading';
-import { initialState } from '../../data';
-import { reducer } from '../../util/reducer';
 import About from './sections/About';
 import Section from './sections/Section';
 import { BodyWrapper } from './sections/BodyWrapper';
@@ -12,78 +10,16 @@ import EducationItem from './sections/EducationItem';
 import styled from '@emotion/styled';
 import { standardBorderRadius } from '../../util/utilities';
 
-export default function Form() {
-  const [
-    { profile, about, experiences, education, languages, skills },
-    dispatch,
-  ] = useReducer(reducer, initialState);
-
-  const handleChangeProfile = (e) => {
-    dispatch({
-      type: 'UPDATE_PROFILE',
-      payload: { key: e.target.name, value: e.target.value },
-      profile: profile,
-    });
-  };
-
-  const handleChangeAbout = (e) => {
-    dispatch({
-      type: 'UPDATE_ABOUT',
-      payload: { key: 'description', value: e.target.value },
-      about: about,
-    });
-  };
-
-  const handleChangeExperiences = (id, key, value) => {
-    dispatch({
-      type: 'UPDATE_EXPERIENCES',
-      payload: {
-        id,
-        key,
-        value,
-      },
-    });
-  };
-
-  const handleChangeEducation = (id, key, value) => {
-    dispatch({
-      type: 'UPDATE_EDUCATION',
-      payload: {
-        id,
-        key,
-        value,
-      },
-    });
-  };
-
-  const handleChangeLanguages = (id, key, value) => {
-    dispatch({
-      type: 'UPDATE_LANGUAGES',
-      payload: {
-        id,
-        key,
-        value,
-      },
-    });
-  };
-
-  const handleChangeSkills = (value, id) => {
-    dispatch({
-      type: 'UPDATE_SKILLS',
-      payload: {
-        id,
-        key: 'name',
-        value: value,
-      },
-      skills: skills,
-    });
-  };
-  // console.log(profile);     //Updates!!!
-  // console.log(about); //Updates!!!
-  // console.log(experiences); //Update!!!
-  // console.log(education);   //Update!!!
-  // console.log(languages);   //Updates!!!
-  // console.log(skills);      // Updates!!!
+export default function Form({
+  cv,
+  onChangeProfile,
+  onChangeAbout,
+  onChangeExperiences,
+  onChangeEducation,
+  onChangeLanguages,
+  onChangeSkills,
+}) {
+  const { profile, about, experiences, education, languages, skills } = cv;
   return (
     <OuterContainer>
       <MainForm>
@@ -96,12 +32,9 @@ export default function Form() {
           email={profile.email}
           address={profile.address}
           url={profile.url}
-          onChangeProfile={handleChangeProfile}
+          onChangeProfile={onChangeProfile}
         ></Heading>
-        <About
-          about={about.description}
-          onChangeAbout={handleChangeAbout}
-        ></About>
+        <About about={about.description} onChangeAbout={onChangeAbout}></About>
         <BodyWrapper>
           <Section subtitle="Experience">
             {experiences.map((experience) => {
@@ -109,7 +42,7 @@ export default function Form() {
                 <Experience
                   key={experience.id}
                   experience={experience}
-                  onChangeExperiences={handleChangeExperiences}
+                  onChangeExperiences={onChangeExperiences}
                 />
               );
             })}
@@ -120,7 +53,7 @@ export default function Form() {
                 <EducationItem
                   key={item.id}
                   item={item}
-                  onChangeEducation={handleChangeEducation}
+                  onChangeEducation={onChangeEducation}
                 />
               );
             })}
@@ -131,7 +64,7 @@ export default function Form() {
                 <Language
                   key={language.id}
                   language={language}
-                  onChangeLanguages={handleChangeLanguages}
+                  onChangeLanguages={onChangeLanguages}
                 />
               );
             })}
@@ -142,7 +75,7 @@ export default function Form() {
                 <Skill
                   key={skill.id}
                   skill={skill}
-                  onChangeSkills={handleChangeSkills}
+                  onChangeSkills={onChangeSkills}
                 />
               );
             })}
