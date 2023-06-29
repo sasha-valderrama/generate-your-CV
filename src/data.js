@@ -27,38 +27,50 @@ export const newValues = {
     url: '',
   },
   about: { description: '' },
-  experience: [
+  experiences: [
     {
-      id: '',
-      position: '',
-      company: ' ',
+      id: nanoid(5),
       from: '',
       to: '',
+      position: '',
+      company: ' ',
+      location: '',
+      description: '',
     },
     {
-      id: '',
-      position: '',
-      company: ' ',
+      id: nanoid(5),
       from: '',
       to: '',
+      position: '',
+      company: ' ',
+      location: '',
+      description: '',
     },
   ],
   languages: [
-    { id: nanoid(), langName: '', proficiency: '' },
-    { id: nanoid(), langName: '', proficiency: '' },
+    { id: nanoid(5), langName: '', proficiency: '' },
+    { id: nanoid(5), langName: '', proficiency: '' },
     {
-      id: nanoid(),
+      id: nanoid(5),
       langName: '',
       proficiency: '',
     },
   ],
   skills: [
-    { id: nanoid(), name: 'a' },
-    { id: nanoid(), name: 'b' },
-    { id: nanoid(), name: 'c' },
-    { id: nanoid(), name: 'd' },
-    { id: nanoid(), name: '' },
+    { id: nanoid(5), name: '' },
+    { id: nanoid(5), name: '' },
+    { id: nanoid(5), name: '' },
+    { id: nanoid(5), name: '' },
+    { id: nanoid(5), name: '' },
   ],
+};
+
+export const initialState = {
+  profile: newValues.profile,
+  about: newValues.about,
+  experiences: newValues.experiences,
+  languages: newValues.languages,
+  skills: newValues.skills,
 };
 
 // export const defaultValues = {

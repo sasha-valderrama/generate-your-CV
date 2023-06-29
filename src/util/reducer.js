@@ -16,6 +16,19 @@ export const reducer = (state, action) => {
           [action.payload.key]: action.payload.value,
         },
       };
+    case 'UPDATE_EXPERIENCES':
+      return {
+        ...state,
+        experiences: state.experiences.map((experience) => {
+          if (experience.id === action.payload.id) {
+            return {
+              ...experience,
+              [action.payload.key]: action.payload.value,
+            };
+          }
+          return experience;
+        }),
+      };
     case 'UPDATE_LANGUAGES':
       return {
         ...state,

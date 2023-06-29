@@ -1,24 +1,24 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { SwitchView } from '../components/ui/SwitchView';
-import { Outlet, useNavigate } from 'react-router-dom';
+// import { Outlet, useNavigate } from 'react-router-dom';
+import Form from '../components/form';
 
 export default function Main() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const showExample = () => {
-    navigate('/cv-form/example');
+    // navigate('/cv-form/example');
   };
 
   const showUpdate = () => {
-    navigate('/cv-form/update');
+    // navigate('/cv-form/update');
   };
-
   return (
     <MainContainer>
       <SwitchView left onClick={showExample}>
         EXAMPLE
       </SwitchView>
-      <Outlet />
+      <Form />
       <SwitchView right onClick={showUpdate}>
         UPDATE
       </SwitchView>
