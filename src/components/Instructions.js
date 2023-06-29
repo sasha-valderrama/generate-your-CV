@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { Button } from '../components/ui/Button';
+import { Button } from './ui/Button';
 import { Link } from 'react-router-dom';
-import { Message, MessageBox, MessageTitle } from '../components/ui/MessageBox';
+import { Message, MessageBox, MessageTitle } from './ui/MessageBox';
 import { wave } from '../util/keyframes';
 import { nanoid } from 'nanoid';
 

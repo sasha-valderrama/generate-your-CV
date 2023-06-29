@@ -1,7 +1,7 @@
 import React from 'react';
 import { OuterContainer } from '../components/form/OuterContainer';
 import { MainForm } from '../components/form/MainForm';
-import Heading from '../components/form/heading';
+import Heading from './form/heading';
 import { exampleUser } from '../data';
 
 export default function Example() {

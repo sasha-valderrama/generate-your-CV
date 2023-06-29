@@ -1,6 +1,6 @@
 import React from 'react';
-import { MessageBox, MessageTitle } from '../components/ui/MessageBox';
-import { Button } from '../components/ui/Button';
+import { MessageBox, MessageTitle } from './ui/MessageBox';
+import { Button } from './ui/Button';
 import { Link } from 'react-router-dom';
 
 export default function PageNotFound() {

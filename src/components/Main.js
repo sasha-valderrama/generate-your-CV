@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { SwitchView } from '../components/ui/SwitchView';
+import { SwitchView } from './ui/SwitchView';
 // import { Outlet, useNavigate } from 'react-router-dom';
-import Form from '../components/form';
+import Form from './form';
 
 export default function Main() {
   // const navigate = useNavigate();
