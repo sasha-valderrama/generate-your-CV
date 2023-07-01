@@ -4,7 +4,7 @@ import { SwitchView } from './ui/SwitchView';
 import Form from './form';
 import { useReducer } from 'react';
 import { reducer } from '../util/reducer';
-import { initialState } from '../data';
+import { defaultValues, initialState } from '../data';
 
 export default function Main() {
   const [cv, dispatch] = useReducer(reducer, initialState);
@@ -76,14 +76,15 @@ export default function Main() {
   // console.log(cv.languages);   //Updates!!!
   // console.log(cv.skills);      // Updates!!!
 
-  const showExample = (e) => {
-    console.log(e);
+  const handleShowExample = (e) => {
+    alert('Example was clicked');
   };
-  const showUpdate = () => {};
-
+  const handleShowUpdate = (e) => {
+    alert('Update was clicked');
+  };
   return (
     <MainContainer>
-      <SwitchView left onClick={(e) => showExample(e)}>
+      <SwitchView left onClick={(e) => handleShowExample(e)}>
         EXAMPLE
       </SwitchView>
       <Form
@@ -95,7 +96,7 @@ export default function Main() {
         onChangeLanguages={handleChangeLanguages}
         onChangeSkills={handleChangeSkills}
       />
-      <SwitchView right onClick={showUpdate}>
+      <SwitchView right onClick={handleShowUpdate}>
         UPDATE
       </SwitchView>
     </MainContainer>
