@@ -31,5 +31,7 @@ const lateralButton = styled.div`
 
 export const SwitchView = styled(lateralButton)`
   color: ${(props) => props.theme.colors.black};
+  font-family: 'Helvetica';
+  font-size: ${(props) => props.theme.fontSize.lg};
   background-color: ${(props) => props.theme.colors.neutral};
 `;

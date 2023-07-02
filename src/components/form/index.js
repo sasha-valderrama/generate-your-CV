@@ -8,7 +8,7 @@ import Skill from './sections/Skills';
 import Experience from './sections/Experience';
 import EducationItem from './sections/EducationItem';
 import styled from '@emotion/styled';
-import { standardBorderRadius } from '../../util/utilities';
+import { flexColumn, standardBorderRadius } from '../../util/utilities';
 
 export default function Form({
   cv,
@@ -86,10 +86,7 @@ export default function Form({
 }
 
 const MainForm = styled.form`
-  // position: relative;
-  // z-index: 999;
-  display: flex;
-  flex-direction: column;
+  ${flexColumn};
   width: 210mm;
   height: fit-content;
   background-color: ${(props) => props.theme.colors.quaternary};

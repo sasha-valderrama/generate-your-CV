@@ -21,12 +21,10 @@ export const MessageBox = styled.div`
 export const MessageTitle = styled.h2`
   align-self: flex-start;
   font-size: ${(props) => props.theme.fontSize.xl};
-  margin-bottom: 1rem;
   margin-left: 2rem;
   font-weight: bold;
    &:hover {
     color: ${(props) => props.theme.colors.tertiary};
-
 `;
 
 export const Message = styled.div`

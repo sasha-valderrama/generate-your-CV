@@ -24,15 +24,6 @@ export default function Heading({
 }) {
   return (
     <HeadingContainer>
-      {/* <ProfilePic src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" /> */}
-      {/* <img src={picture} alt="I should show something" />
-      <ProfilePic
-        type="file"
-        // multiple
-        // accept="image/*"
-        name="file"
-        onChange={onChangeImage}
-      /> */}
       <ProfileContainer>
         <ProfileInput
           username

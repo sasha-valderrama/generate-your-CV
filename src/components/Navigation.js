@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { centerContent } from '../../util/utilities';
-import { Button } from './Button';
+import { centerContent } from '../util/utilities';
+import { Button } from './ui/Button';
 import { Link } from 'react-router-dom';
+import { heartbeat } from '../util/keyframes';
 
 export default function Navigation() {
   return (
@@ -27,13 +28,12 @@ const NavigationStyled = styled.div`
   ${centerContent}
   justify-content: space-around;
   width: 100vw;
-  height: 8rem;
+  height: 7rem;
   background-color: ${(props) => props.theme.colors.quaternary};
   border-bottom: 4px solid ${(props) => props.theme.colors.black};
 `;
 
 const Title = styled.h1`
-  font-size: ${(props) => props.theme.fontSize.xxl};
   color: ${(props) => props.theme.colors.accentSecond};
   text-shadow: 2px 2px 0 ${(props) => props.theme.colors.black};
   font-size: ${(props) => props.theme.fontSize.title};
@@ -41,5 +41,6 @@ const Title = styled.h1`
   &:hover {
     color: ${(props) => props.theme.colors.neutral};
     background-color:
-      ${(props) => props.theme.colors.primary}); }
+      ${(props) => props.theme.colors.primary}); 
+      animation:  ${heartbeat} 1.5s ease-in-out infinite both;
 `;

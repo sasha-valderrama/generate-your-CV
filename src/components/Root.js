@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import { ThemeProvider } from '@emotion/react';
-import Navigation from './ui/Navigation';
+import Navigation from './Navigation';
 
 export default function Root() {
   return (
@@ -40,5 +40,6 @@ export const theme = {
   },
   fontFamily: {
     monospace: 'monospace',
+    main: 'Helvetica',
   },
 };

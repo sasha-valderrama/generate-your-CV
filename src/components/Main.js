@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
-import React, { useState } from 'react';
+import React from 'react';
 import { SwitchView } from './ui/SwitchView';
 import Form from './form';
 import { useReducer } from 'react';
 import { reducer } from '../util/reducer';
-import { defaultValues, initialState } from '../data';
+import { initialState } from '../data';
+import { centerContent } from '../util/utilities';
 
 export default function Main() {
   const [cv, dispatch] = useReducer(reducer, initialState);
@@ -69,12 +70,6 @@ export default function Main() {
       skills: cv.skills,
     });
   };
-  // console.log(cv.profile);     //Updates!!!
-  // console.log(cv.about);       //Updates!!!
-  // console.log(cv.experiences); //Update!!!
-  // console.log(cv.education);   //Update!!!
-  // console.log(cv.languages);   //Updates!!!
-  // console.log(cv.skills);      // Updates!!!
 
   const handleShowTemplate = (e) => {
     dispatch({
@@ -89,7 +84,7 @@ export default function Main() {
   return (
     <MainContainer>
       <SwitchView left onClick={(e) => handleShowTemplate(e)}>
-        SHOW TEMPLATE
+        TEMPLATE
       </SwitchView>
       <Form
         cv={cv}
@@ -110,8 +105,10 @@ export default function Main() {
 const MainContainer = styled.div`
   color: ${(props) => props.theme.colors.quaternary};
   background-color: ${(props) => props.theme.colors.neutral};
-  display: flex;
+  ${centerContent},
+  width: 100vw;
   align-items: flex-start;
-  justify-content: center;
   gap: 2rem;
+  padding-bottom: 3rem;
+  min-height: calc(100vh - 7rem);
 `;

@@ -105,14 +105,6 @@ const ExperienceWrapper = styled.div`
   width: 275px;
 `;
 
-// const HeadingWrapper = styled.div`
-//   display: flex;
-//   justify-content: space-between;
-//   gap: 0.5rem;
-//   width: 280px;
-//   font-weight: bold;
-// `;
-
 const YearsWrapper = styled.div`
   display: flex;
   width: fit-content;
