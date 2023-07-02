@@ -8,7 +8,7 @@ export default function About({ about, onChangeAbout }) {
     <AboutWrapper
       rows="3"
       wrap="hard"
-      maxLength="175"
+      // maxLength="200"
       onChange={(e) => onChangeAbout(e)}
       name="about"
       id="about"
@@ -20,11 +20,11 @@ export default function About({ about, onChangeAbout }) {
 
 const AboutWrapper = styled(defaultTextarea)`
   position: relative;
-  width: 72%;
-  height: fit-content;
+  width: 75%;
+  min-height: 8rem;
   margin-left: auto;
-  margin-right: 3rem;
-  margin-top: 2rem;
+  margin-right: auto;
+  margin-top: 2.8rem;
   padding: 0.8rem 1rem;
   ${thinBorder};
   ${standardBorderRadius};
@@ -32,4 +32,5 @@ const AboutWrapper = styled(defaultTextarea)`
   background-color: ${(props) => props.theme.colors.neutralSecond};
   font-size: ${(props) => props.theme.fontSize.md};
   line-height: 1.5;
+  font-family: ${(props) => props.theme.fontFamily.monospace};
 `;

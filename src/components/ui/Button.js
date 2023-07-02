@@ -13,6 +13,7 @@ ${standardBorder};
   background-color: ${(props) => props.theme.colors.quaternary};
   border-radius: ${(props) =>
     props.primary ? '10px 10px 0px 10px' : '10px 10px 10px 0px'};
+    font-family: ${(props) => props.theme.fontFamily.monospace};
     
   &:hover, 
   &:focus{

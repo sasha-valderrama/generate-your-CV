@@ -11,8 +11,8 @@ export const HeadingContainer = styled.div`
   width: 75%;
   height: fit-content;
   margin-top: 2rem;
-  margin-left: auto;
-  margin-right: 3rem;
+  margin-left: 3rem;
+  margin-right: auto;
   padding: 0.8rem 2rem;
   ${thinBorder};
   ${standardBorderRadius};
@@ -29,18 +29,18 @@ export const ProfileContainer = styled.div`
   padding-bottom: 2.5rem;
 `;
 
-export const ProfilePic = styled.img`
-  position: absolute;
-  left: -21.5%;
-  top: 2.5rem;
-  width: 180px;
-  height: 250px;
-  ${marginAuto};
-  ${standardBorderRadius};
-  ${thinBorder};
-  box-shadow: ${(props) => `-5px 5px 0 ${props.theme.colors.white}`};
-  background-color: ${(props) => props.theme.colors.accent};
-`;
+// export const ProfilePic = styled.input`
+//   position: absolute;
+//   left: -21.5%;
+//   top: 2.5rem;
+//   width: 180px;
+//   height: 250px;
+//   ${marginAuto};
+//   ${standardBorderRadius};
+//   ${thinBorder};
+//   box-shadow: ${(props) => `-5px 5px 0 ${props.theme.colors.white}`};
+//   background-color: ${(props) => props.theme.colors.accent};
+// `;
 
 export const ProfileInput = styled(defaultInput)`
   margin-top: -1rem;

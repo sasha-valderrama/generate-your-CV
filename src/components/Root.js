@@ -38,4 +38,7 @@ export const theme = {
     xxl: '36px',
     title: '42px',
   },
+  fontFamily: {
+    monospace: 'monospace',
+  },
 };

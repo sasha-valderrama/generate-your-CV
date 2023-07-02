@@ -27,7 +27,6 @@ export default function Form({
           firstName={profile.firstName}
           lastName={profile.lastName}
           jobPosition={profile.jobPosition}
-          picture={profile.picture}
           phone={profile.phone}
           email={profile.email}
           address={profile.address}

@@ -7,10 +7,16 @@ import { Link } from 'react-router-dom';
 export default function Navigation() {
   return (
     <NavigationStyled>
-      <Button primary>Save</Button>
+      <a
+        href="https://github.com/sasha-valderrama/generate-your-cv"
+        rel="noreferrer"
+        target="_blank"
+      >
+        <Button primary>Source Code</Button>
+      </a>
       <Title>Generate your CV</Title>
       <Link to="/">
-        <Button>Reset </Button>
+        <Button>Reset</Button>
       </Link>
     </NavigationStyled>
   );

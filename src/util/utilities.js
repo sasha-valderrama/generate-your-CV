@@ -8,6 +8,7 @@ export const defaultInput = styled.input`
   font-weight: bold;
   width: 100%;
   color: ${(props) => props.theme.colors.black};
+  font-family: ${(props) => props.theme.fontFamily.monospace};
   &:hover,
   &:focus {
     color: ${(props) => props.theme.colors.white};
@@ -20,6 +21,7 @@ export const defaultInput = styled.input`
 
 export const defaultTextarea = styled.textarea`
   background-color: inherit;
+  font-family: ${(props) => props.theme.fontFamily.monospace};
   resize: none;
   border: none;
   color: ${(props) => props.theme.colors.black};

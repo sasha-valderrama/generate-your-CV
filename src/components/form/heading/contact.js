@@ -9,14 +9,14 @@ import {
 export const ContactContainer = styled.div`
   position: absolute;
   z-index: 999;
-  top: 0.5rem;
-  right: -2.1rem;
+  bottom: -4rem;
+  right: -8rem;
   ${centerContent};
   ${standardBorderRadius};
   ${thinBorder};
   ${flexColumn};
-  width: 16rem;
-  height: 8rem;
+  width: 19rem;
+  height: 10rem;
   margin-top: 1rem;
   gap: 0.5rem;
   background-color: ${(props) => props.theme.colors.white};
@@ -25,10 +25,11 @@ export const ContactContainer = styled.div`
 export const ContactWrapper = styled.div`
   ${centerContent};
   gap: 0.6rem;
+  margin-left: 0.6rem;
 `;
 
 export const ContactItem = styled.input`
-  width: 190px;
+  width: 240px;
   font-size: ${(props) => props.theme.fontSize.sm};
   background-color: inherit;
   border: none;
@@ -40,4 +41,5 @@ export const ContactItem = styled.input`
   ::placeholder {
     font-size: ${(props) => props.theme.fontSize.xs};
   }
+  font-family: ${(props) => props.theme.fontFamily.monospace};
 `;

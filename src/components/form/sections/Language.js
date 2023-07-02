@@ -50,4 +50,5 @@ const LanguageWrapper = styled.div`
 const LanguageItem = styled(defaultInput)`
   width: ${(props) => (props.left ? '220px' : '260px')};
   font-weight: ${(props) => (props.left ? 'bold' : 'normal')};
+  font-family: ${(props) => props.theme.fontFamily.monospace};
 `;

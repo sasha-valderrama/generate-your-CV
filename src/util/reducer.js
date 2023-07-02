@@ -1,3 +1,5 @@
+import { defaultValues, initialState } from '../data';
+
 export const reducer = (state, action) => {
   switch (action.type) {
     case 'UPDATE_PROFILE':
@@ -68,6 +70,11 @@ export const reducer = (state, action) => {
           return skill;
         }),
       };
+    case 'UPDATE_TEMPLATE':
+      return defaultValues;
+
+    case 'ERASE_ALL':
+      return initialState;
     default:
       throw new Error(`Unknown action type: ${action.type}`);
   }

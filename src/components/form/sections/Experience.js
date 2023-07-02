@@ -37,37 +37,35 @@ export default function Experience({ experience, onChangeExperiences }) {
 
   return (
     <ExperienceWrapper>
-      <HeadingWrapper>
-        <YearsWrapper>
-          <ExperienceYear
-            left
-            type="text"
-            id={`${experience.id}-from`}
-            name="from"
-            value={experience.from}
-            onChange={(e) => handleFromChange(e)}
-            placeholder="FROM"
-          />
-          <BsDash />
-          <ExperienceYear
-            type="text"
-            id={`${experience.id}-to`}
-            name="to"
-            value={experience.to}
-            onChange={(e) => handleToChange(e)}
-            placeholder="TO"
-          />
-        </YearsWrapper>
-        <ExperienceInput
-          right
+      <YearsWrapper>
+        <ExperienceYear
+          left
           type="text"
-          id={`${experience.id}-position`}
-          name="position"
-          value={experience.position}
-          onChange={(e) => handlePositionChange(e)}
-          placeholder="POSITION"
+          id={`${experience.id}-from`}
+          name="from"
+          value={experience.from}
+          onChange={(e) => handleFromChange(e)}
+          placeholder="FROM"
         />
-      </HeadingWrapper>
+        <BsDash />
+        <ExperienceYear
+          type="text"
+          id={`${experience.id}-to`}
+          name="to"
+          value={experience.to}
+          onChange={(e) => handleToChange(e)}
+          placeholder="TO"
+        />
+      </YearsWrapper>
+      <ExperienceInput
+        right
+        type="text"
+        id={`${experience.id}-position`}
+        name="position"
+        value={experience.position}
+        onChange={(e) => handlePositionChange(e)}
+        placeholder="POSITION"
+      />
       <ExperienceInput
         type="text"
         id={`${experience.id}-company`}
@@ -104,15 +102,16 @@ const ExperienceWrapper = styled.div`
   height: fit-content;
   justify-content: flex-start;
   gap: 0.5rem;
+  width: 275px;
 `;
 
-const HeadingWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 1.2rem;
-  width: 280px;
-  font-weight: bold;
-`;
+// const HeadingWrapper = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   gap: 0.5rem;
+//   width: 280px;
+//   font-weight: bold;
+// `;
 
 const YearsWrapper = styled.div`
   display: flex;
@@ -122,6 +121,7 @@ const YearsWrapper = styled.div`
 const ExperienceYear = styled(defaultInput)`
   width: 50px;
   text-align: ${(props) => (props.left ? 'left' : 'center')};
+  font-family: ${(props) => props.theme.fontFamily.monospace};
   ::placeholder {
     font-size: ${(props) => props.theme.fontSize.sm};
   }

@@ -37,6 +37,7 @@ const Subtitle = styled.h2`
   font-weight: bold;
   font-size: ${(props) => props.theme.fontSize.lg};
   text-align: center;
+  font-family: ${(props) => props.theme.fontFamily.monospace};
 `;
 export const SectionListItem = styled.li`
   color: ${(props) => props.theme.colors.black};

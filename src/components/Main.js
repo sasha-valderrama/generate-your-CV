@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import React from 'react';
+import React, { useState } from 'react';
 import { SwitchView } from './ui/SwitchView';
 import Form from './form';
 import { useReducer } from 'react';
@@ -76,16 +76,20 @@ export default function Main() {
   // console.log(cv.languages);   //Updates!!!
   // console.log(cv.skills);      // Updates!!!
 
-  const handleShowExample = (e) => {
-    alert('Example was clicked');
+  const handleShowTemplate = (e) => {
+    dispatch({
+      type: 'UPDATE_TEMPLATE',
+    });
   };
   const handleShowUpdate = (e) => {
-    alert('Update was clicked');
+    dispatch({
+      type: 'ERASE_ALL',
+    });
   };
   return (
     <MainContainer>
-      <SwitchView left onClick={(e) => handleShowExample(e)}>
-        EXAMPLE
+      <SwitchView left onClick={(e) => handleShowTemplate(e)}>
+        SHOW TEMPLATE
       </SwitchView>
       <Form
         cv={cv}
@@ -97,7 +101,7 @@ export default function Main() {
         onChangeSkills={handleChangeSkills}
       />
       <SwitchView right onClick={handleShowUpdate}>
-        UPDATE
+        ERASE ALL
       </SwitchView>
     </MainContainer>
   );

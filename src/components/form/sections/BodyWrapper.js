@@ -8,4 +8,5 @@ export const BodyWrapper = styled.main`
   grid-gap: 1rem;
   margin-top: 2rem;
   margin-bottom: 3rem;
+  font-family: ${(props) => props.theme.fontFamily.monospace};
 `;

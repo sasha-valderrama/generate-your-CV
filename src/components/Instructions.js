@@ -7,17 +7,23 @@ import { wave } from '../util/keyframes';
 import { nanoid } from 'nanoid';
 
 const listOfInstructions = [
+  // {
+  //   id: nanoid(),
+  //   instruction:
+  //     'Click on the Edit to start updating your resume and submit them.',
+  // },
   {
     id: nanoid(),
-    instruction:
-      'Click on the Edit to start updating your resume and submit them.',
+    instruction: 'If you need some inspiration click on SHOW TEMPLATE.',
   },
-  { id: nanoid(), instruction: 'If you some inspiration click on "EXAMPLE".' },
   {
     id: nanoid(),
-    instruction: 'Click on SAVE to download a PDF version of your resume.',
+    instruction: 'If you want to have a clean start, click on ERASE ALL.',
   },
-  { id: nanoid(), instruction: 'Click on RESET if you need to start over.' },
+  {
+    id: nanoid(),
+    instruction: 'Click on RESET if you need to start all over.',
+  },
 ];
 
 export default function Instructions() {

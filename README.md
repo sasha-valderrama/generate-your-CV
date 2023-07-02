@@ -1,6 +1,6 @@
 # ✨✨CV Generator✨✨
 
-_😺🐶My first React Project, Ever 👩🏽‍💻🍵_
+😺🐶*My first React Project, Ever* 👩🏽‍💻🍵
 
 This React app allows the user update the cv template with their own information and save it (download it)as a PDF.
 

@@ -19,7 +19,8 @@ const lateralButton = styled.div`
   background-color: ${(props) => props.theme.colors.neutral};
   writing-mode: vertical-rl;
   text-orientation: upright;
-
+  font-size: ${(props) => props.theme.fontSize.xl};
+  font-family: ${(props) => props.theme.fontFamily.monospace};
   &:hover,
   &:focus {
     background-color: ${(props) => props.theme.colors.accentSecond};

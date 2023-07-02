@@ -13,7 +13,7 @@ export default function Skill({ skill, onChangeSkills }) {
         name={skill.name}
         value={skill.name}
         onChange={(e) => onChangeSkills(e.target.value, skill.id)}
-        placeholder="Enter either a Hard or Soft skill"
+        placeholder="Enter a Hard or Soft skill"
       ></SkillItem>
     </SkillsWrapper>
   );
@@ -30,4 +30,5 @@ const SkillsWrapper = styled.div`
 const SkillItem = styled(defaultInput)`
   width: ${(props) => (props.left ? '220px' : '260px')};
   font-weight: ${(props) => (props.left ? 'bold' : 'normal')};
+  font-family: ${(props) => props.theme.fontFamily.monospace};
 `;

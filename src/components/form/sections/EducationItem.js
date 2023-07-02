@@ -50,7 +50,7 @@ export default function EducationItem({ item, onChangeEducation }) {
         />
       </YearsWrapper>
       <EducationInput
-        university
+        right
         type="text"
         id={`${item.id}-university`}
         name="university"
@@ -59,7 +59,15 @@ export default function EducationItem({ item, onChangeEducation }) {
         placeholder="University"
       />
       <EducationInputWrapper>
-        <div>Degree: </div>
+        <div
+          style={{
+            fontFamily: 'monospace',
+            textTransform: 'uppercase',
+            fontSize: '13px',
+          }}
+        >
+          Degree:{' '}
+        </div>
         <EducationInput
           type="text"
           id={`${item.id}-degree`}
@@ -70,7 +78,15 @@ export default function EducationItem({ item, onChangeEducation }) {
         />
       </EducationInputWrapper>
       <EducationInputWrapper>
-        <div>Subject: </div>
+        <div
+          style={{
+            fontFamily: 'monospace',
+            textTransform: 'uppercase',
+            fontSize: '13px',
+          }}
+        >
+          Subject:{' '}
+        </div>
         <EducationInput
           type="text"
           id={`${item.id}-subject`}
@@ -88,7 +104,7 @@ const EducationWrapper = styled.div`
   ${flexColumn};
   justify-content: flex-start;
   gap: 1rem;
-  width: fit-content;
+  width: 100%;
   height: fit-content;
   margin-bottom: 2rem;
 `;
@@ -113,8 +129,10 @@ const EducationInputWrapper = styled.div`
 `;
 
 const EducationInput = styled(defaultInput)`
+  font-family: inherit;
   width: ${(props) => (props.university ? '270px' : '100%')};
   text-transform: ${(props) => (props.right ? 'uppercase' : '')};
-  font-size: ${(props) =>
-    props.university ? props.theme.fontSize.md : props.theme.fontSize.sm};
+  font-weight: ${(props) => (props.right ? 'bold' : '')};
+  font-size: ${(props) => props.theme.fontSize.sm};
+  text-align: ${(props) => (props.right ? 'right' : 'left')};
 `;
