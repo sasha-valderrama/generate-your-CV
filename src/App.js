@@ -13,8 +13,8 @@ import PageNotFound from './components/PageNotFound';
 
 const appRouter = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/generate-your-cv/" element={<Root />}>
-      <Route path="/generate-your-cv/" element={<Home />}>
+    <Route path="/" element={<Root />}>
+      <Route path="/" element={<Home />}>
         <Route index element={<Instructions />} />
         <Route path="cv-form" element={<Main />} />
         <Route path="*" element={<PageNotFound />} />
