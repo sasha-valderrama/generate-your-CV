@@ -2,7 +2,7 @@ import './global.css';
 import {
   Route,
   RouterProvider,
-  createBrowserRouter,
+  createHashRouter,
   createRoutesFromElements,
 } from 'react-router-dom';
 import Root from './components/Root';
@@ -11,7 +11,7 @@ import Instructions from './components/Instructions';
 import Main from './components/Main';
 import PageNotFound from './components/PageNotFound';
 
-const appRouter = createBrowserRouter(
+const appRouter = createHashRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />}>
       <Route path="/" element={<Home />}>
