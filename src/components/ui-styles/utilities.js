@@ -72,3 +72,14 @@ export const marginAuto = css`
   margin-left: auto;
   margin-right: auto;
 `;
+
+export const defaultButton = styled.button`
+  ${standardBorder};
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: ${(props) => props.theme.fontFamily.monospace};
+  &:hover,
+  &:focus {
+    cursor: pointer;
+  }
+`;

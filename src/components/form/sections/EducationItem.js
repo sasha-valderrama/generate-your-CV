@@ -2,8 +2,14 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { BsDash } from 'react-icons/bs';
 import { defaultInput, flexColumn } from '../../ui-styles/utilities';
+import Edit from '../../ui-styles/Editor';
 
-export default function EducationItem({ item, onChangeEducation }) {
+export default function EducationItem({
+  item,
+  onChangeEducation,
+  onAddItem,
+  onRemoveItem,
+}) {
   const handleFromChange = (e) => {
     const { value } = e.target;
     onChangeEducation(item.id, 'from', value);
@@ -96,11 +102,13 @@ export default function EducationItem({ item, onChangeEducation }) {
           placeholder="Subject"
         />
       </EducationInputWrapper>
+      <Edit item={item} onAddItem={onAddItem} onRemoveItem={onRemoveItem} />
     </EducationWrapper>
   );
 }
 
 const EducationWrapper = styled.div`
+  position: relative;
   ${flexColumn};
   justify-content: flex-start;
   gap: 1rem;

@@ -2,8 +2,14 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { TbPoint } from 'react-icons/tb';
 import { centerContentInColumn, defaultInput } from '../../ui-styles/utilities';
+import Edit from '../../ui-styles/Editor';
 
-export default function Language({ language, onChangeLanguages }) {
+export default function Language({
+  language,
+  onChangeLanguages,
+  onAddItem,
+  onRemoveItem,
+}) {
   const handleNameChange = (e) => {
     const { value } = e.target;
     onChangeLanguages(language.id, 'langName', value);
@@ -36,11 +42,13 @@ export default function Language({ language, onChangeLanguages }) {
         onChange={(e) => handleProficiencyChange(e)}
         placeholder="Proficiency level"
       ></LanguageItem>
+      <Edit item={language} onAddItem={onAddItem} onRemoveItem={onRemoveItem} />
     </LanguageWrapper>
   );
 }
 
 const LanguageWrapper = styled.div`
+  position: relative;
   ${centerContentInColumn};
   width: fit-content;
   height: fit-content;

@@ -10,6 +10,20 @@ import { SecondaryButton } from './ui-styles/buttons';
 export default function Main() {
   const [cv, dispatch] = useReducer(reducer, initialState);
 
+  const handleAddItem = (section) => {
+    dispatch({
+      type: 'ADD_ITEM',
+      section: section.toLowerCase(),
+    });
+  };
+
+  const handleRemoveItem = (section) => {
+    dispatch({
+      type: 'REMOVE_ITEM',
+      section: section.toLowerCase(),
+    });
+  };
+
   const handleChangeProfile = (e) => {
     dispatch({
       type: 'UPDATE_PROFILE',
@@ -94,6 +108,8 @@ export default function Main() {
         onChangeEducation={handleChangeEducation}
         onChangeLanguages={handleChangeLanguages}
         onChangeSkills={handleChangeSkills}
+        onAddItem={handleAddItem}
+        onRemoveItem={handleRemoveItem}
       />
       <SecondaryButton right onClick={handleShowUpdate}>
         ERASE ALL

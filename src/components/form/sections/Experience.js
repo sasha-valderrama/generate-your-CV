@@ -6,8 +6,14 @@ import {
   defaultTextarea,
   flexColumn,
 } from '../../ui-styles/utilities';
+import Edit from '../../ui-styles/Editor';
 
-export default function Experience({ experience, onChangeExperiences }) {
+export default function Experience({
+  experience,
+  onChangeExperiences,
+  onAddItem,
+  onRemoveItem,
+}) {
   const handleFromChange = (e) => {
     const { value } = e.target;
     onChangeExperiences(experience.id, 'from', value);
@@ -92,11 +98,17 @@ export default function Experience({ experience, onChangeExperiences }) {
         onChange={(e) => handleDescriptionChange(e)}
         placeholder="A short description of the work you did there."
       />
+      <Edit
+        item={experience}
+        onAddItem={onAddItem}
+        onRemoveItem={onRemoveItem}
+      />
     </ExperienceWrapper>
   );
 }
 
 const ExperienceWrapper = styled.div`
+  position: relative;
   ${flexColumn};
   width: fit-content;
   height: fit-content;
