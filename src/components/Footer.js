@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { centerContent } from '../util/utilities';
-import { heartbeat } from '../util/keyframes';
+import { vibrate } from '../util/keyframes';
 import { Button } from './ui/Button';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -50,15 +50,15 @@ const FooterStyled = styled.div`
 `;
 
 const FooterTitle = styled.p`
-  font-size: ${(props) => props.theme.fontSize.md};
+  font-size: ${(props) => props.theme.fontSize.sm};
   color: ${(props) => props.theme.colors.accentSecond};
   text-shadow: 2px 2px 0 ${(props) => props.theme.colors.black};
   font-weight: bold;
   padding:2rem 3rem;
   &:hover {
     color: ${(props) => props.theme.colors.neutral};
-    background-color:
-      ${(props) => props.theme.colors.primary});
-    animation:  ${heartbeat} 1.5s ease-in-out infinite both;
+    background-color: ${(props) => props.theme.colors.primary});
+    animation: ${vibrate} 0.3s linear infinite both;
     cursor: pointer;
+}   
 `;

@@ -4,8 +4,9 @@ import {
   standardBorder,
   standardBorderRadius,
 } from '../../util/utilities';
+import { colorChange } from '../../util/keyframes';
 
-const lateralButton = styled.div`
+export const LateralButton = styled.div`
   position: sticky;
   top: 10rem;
   ${standardBorder};
@@ -19,19 +20,14 @@ const lateralButton = styled.div`
   background-color: ${(props) => props.theme.colors.neutral};
   writing-mode: vertical-rl;
   text-orientation: upright;
-  font-size: ${(props) => props.theme.fontSize.xl};
+  font-size: ${(props) => props.theme.fontSize.sm};
   font-family: ${(props) => props.theme.fontFamily.monospace};
   &:hover,
   &:focus {
-    background-color: ${(props) => props.theme.colors.accentSecond};
+    font-size: ${(props) => props.theme.fontSize.lg};
+    transition: font-size 200ms ease-out;
     box-shadow: ${(props) => `5px 5px 0 ${props.theme.colors.black}`};
+    animation: ${colorChange} 600ms linear infinite alternate both;
     cursor: pointer;
   }
-`;
-
-export const SwitchView = styled(lateralButton)`
-  color: ${(props) => props.theme.colors.black};
-  font-family: 'Helvetica';
-  font-size: ${(props) => props.theme.fontSize.lg};
-  background-color: ${(props) => props.theme.colors.neutral};
 `;

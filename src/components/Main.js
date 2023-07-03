@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { SwitchView } from './ui/SwitchView';
+import { LateralButton } from './ui/LateralButton';
 import Form from './form';
 import { useReducer } from 'react';
 import { reducer } from '../util/reducer';
@@ -83,9 +83,9 @@ export default function Main() {
   };
   return (
     <MainContainer>
-      <SwitchView left onClick={(e) => handleShowTemplate(e)}>
+      <LateralButton left onClick={(e) => handleShowTemplate(e)}>
         TEMPLATE
-      </SwitchView>
+      </LateralButton>
       <Form
         cv={cv}
         onChangeProfile={handleChangeProfile}
@@ -95,9 +95,9 @@ export default function Main() {
         onChangeLanguages={handleChangeLanguages}
         onChangeSkills={handleChangeSkills}
       />
-      <SwitchView right onClick={handleShowUpdate}>
+      <LateralButton right onClick={handleShowUpdate}>
         ERASE ALL
-      </SwitchView>
+      </LateralButton>
     </MainContainer>
   );
 }
