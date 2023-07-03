@@ -4,9 +4,9 @@ import {
   flexColumn,
   standardBorder,
   standardBorderRadius,
-} from '../../util/utilities';
+} from './utilities';
 
-export const MessageBox = styled.div`
+export const MessageWrapper = styled.div`
   ${standardBorder};
   ${standardBorderRadius};
   ${centerContent};

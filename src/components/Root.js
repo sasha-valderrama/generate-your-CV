@@ -1,14 +1,16 @@
 import React from 'react';
 import { ThemeProvider } from '@emotion/react';
-import Navigation from './Navigation';
 import Home from './Home';
+import Header from './Header';
+import Footer from './Footer';
 
 export default function Root() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Navigation />
+        <Header />
         <Home />
+        <Footer />
       </ThemeProvider>
     </>
   );

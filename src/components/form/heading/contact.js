@@ -4,7 +4,7 @@ import {
   flexColumn,
   standardBorderRadius,
   thinBorder,
-} from '../../../util/utilities';
+} from '../../ui-styles/utilities';
 
 export const ContactContainer = styled.div`
   position: absolute;

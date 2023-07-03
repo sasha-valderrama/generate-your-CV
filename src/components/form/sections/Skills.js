@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { TbPoint } from 'react-icons/tb';
-import { defaultInput } from '../../../util/utilities';
+import { defaultInput } from '../../ui-styles/utilities';
 
 export default function Skill({ skill, onChangeSkills }) {
   return (

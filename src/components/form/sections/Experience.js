@@ -5,7 +5,7 @@ import {
   defaultInput,
   defaultTextarea,
   flexColumn,
-} from '../../../util/utilities';
+} from '../../ui-styles/utilities';
 
 export default function Experience({ experience, onChangeExperiences }) {
   const handleFromChange = (e) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { BsDash } from 'react-icons/bs';
-import { defaultInput, flexColumn } from '../../../util/utilities';
+import { defaultInput, flexColumn } from '../../ui-styles/utilities';
 
 export default function EducationItem({ item, onChangeEducation }) {
   const handleFromChange = (e) => {

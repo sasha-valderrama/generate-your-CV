@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { centerContent } from '../util/utilities';
+import { centerContent } from './ui-styles/utilities';
 import { Outlet } from 'react-router-dom';
-import Footer from './Footer';
 
 export default function Home() {
   return (
@@ -10,7 +9,6 @@ export default function Home() {
       <HomeStyled>
         <Outlet />
       </HomeStyled>
-      <Footer />
     </>
   );
 }

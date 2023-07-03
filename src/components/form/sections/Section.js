@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { standardBorderRadius, thinBorder } from '../../../util/utilities';
+import { standardBorderRadius, thinBorder } from '../../ui-styles/utilities';
 
 export default function Section({ subtitle, children }) {
   return (

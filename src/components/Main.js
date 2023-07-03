@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { LateralButton } from './ui/LateralButton';
 import Form from './form';
 import { useReducer } from 'react';
-import { reducer } from '../util/reducer';
+import { reducer } from '../reducer';
 import { initialState } from '../data';
-import { centerContent } from '../util/utilities';
+import { centerContent } from './ui-styles/utilities';
+import { SecondaryButton } from './ui-styles/buttons';
 
 export default function Main() {
   const [cv, dispatch] = useReducer(reducer, initialState);
@@ -83,9 +83,9 @@ export default function Main() {
   };
   return (
     <MainContainer>
-      <LateralButton left onClick={(e) => handleShowTemplate(e)}>
+      <SecondaryButton left onClick={(e) => handleShowTemplate(e)}>
         TEMPLATE
-      </LateralButton>
+      </SecondaryButton>
       <Form
         cv={cv}
         onChangeProfile={handleChangeProfile}
@@ -95,9 +95,9 @@ export default function Main() {
         onChangeLanguages={handleChangeLanguages}
         onChangeSkills={handleChangeSkills}
       />
-      <LateralButton right onClick={handleShowUpdate}>
+      <SecondaryButton right onClick={handleShowUpdate}>
         ERASE ALL
-      </LateralButton>
+      </SecondaryButton>
     </MainContainer>
   );
 }

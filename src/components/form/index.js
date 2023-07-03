@@ -8,7 +8,7 @@ import Skill from './sections/Skills';
 import Experience from './sections/Experience';
 import EducationItem from './sections/EducationItem';
 import styled from '@emotion/styled';
-import { flexColumn, standardBorderRadius } from '../../util/utilities';
+import { flexColumn, standardBorderRadius } from '../ui-styles/utilities';
 
 export default function Form({
   cv,

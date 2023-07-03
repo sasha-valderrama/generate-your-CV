@@ -1,14 +1,12 @@
 import React from 'react';
-import styled from '@emotion/styled';
-import { centerContent } from '../util/utilities';
-import { vibrate } from '../util/keyframes';
-import { Button } from './ui/Button';
+import { PrimaryButton } from './ui-styles/buttons';
 import { Link, useLocation } from 'react-router-dom';
+import { NavTitle, NavWrapper } from './ui-styles/navbar';
 
 export default function Footer() {
   const { pathname } = useLocation();
   return (
-    <FooterStyled>
+    <NavWrapper>
       {pathname === '/' ? (
         <></>
       ) : (
@@ -17,7 +15,7 @@ export default function Footer() {
           rel="noreferrer"
           target="_blank"
         >
-          <Button primary>Source Code</Button>
+          <PrimaryButton primary>Source Code</PrimaryButton>
         </a>
       )}
       <a
@@ -25,40 +23,15 @@ export default function Footer() {
         target="_blank"
         rel="noreferrer"
       >
-        <FooterTitle>🍵 Make by Sasha Valderrama 👩🏽‍💻</FooterTitle>
+        <NavTitle>🍵 Make by Sasha Valderrama 👩🏽‍💻</NavTitle>
       </a>
       {pathname === '/' ? (
         <></>
       ) : (
         <Link to="/">
-          <Button>Reset</Button>
+          <PrimaryButton>Reset</PrimaryButton>
         </Link>
       )}
-    </FooterStyled>
+    </NavWrapper>
   );
 }
-
-const FooterStyled = styled.div`
-  position: relative;
-  z-index: 999;
-  bottom: 0;
-  width: 100vw;
-  height: 6rem;
-  ${centerContent};
-  background-color: ${(props) => props.theme.colors.quaternary};
-  border-top: 4px solid ${(props) => props.theme.colors.black};
-`;
-
-const FooterTitle = styled.p`
-  font-size: ${(props) => props.theme.fontSize.sm};
-  color: ${(props) => props.theme.colors.accentSecond};
-  text-shadow: 2px 2px 0 ${(props) => props.theme.colors.black};
-  font-weight: bold;
-  padding:2rem 3rem;
-  &:hover {
-    color: ${(props) => props.theme.colors.neutral};
-    background-color: ${(props) => props.theme.colors.primary});
-    animation: ${vibrate} 0.3s linear infinite both;
-    cursor: pointer;
-}   
-`;

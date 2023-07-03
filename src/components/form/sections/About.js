@@ -1,14 +1,13 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { standardBorderRadius, thinBorder } from '../../../util/utilities';
-import { defaultTextarea } from '../../../util/utilities';
+import { standardBorderRadius, thinBorder } from '../../ui-styles/utilities';
+import { defaultTextarea } from '../../ui-styles/utilities';
 
 export default function About({ about, onChangeAbout }) {
   return (
     <AboutWrapper
       rows="3"
       wrap="hard"
-      // maxLength="200"
       onChange={(e) => onChangeAbout(e)}
       name="about"
       id="about"

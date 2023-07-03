@@ -1,16 +1,16 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { Button } from './ui/Button';
 import { Link } from 'react-router-dom';
 import { AiFillAlert } from 'react-icons/ai';
 import {
   Message,
-  MessageBox,
   MessageFootnote,
   MessageTitle,
-} from './ui/MessageBox';
-import { wave } from '../util/keyframes';
+  MessageWrapper,
+} from './ui-styles/infoBox';
+import { wave } from './ui-styles/keyframes';
 import { nanoid } from 'nanoid';
+import { PrimaryButton } from './ui-styles/buttons';
 
 const listOfInstructions = [
   // {
@@ -34,7 +34,7 @@ const listOfInstructions = [
 
 export default function Instructions() {
   return (
-    <MessageBox>
+    <MessageWrapper>
       <MessageTitle big>
         Hello there! <WelcomeEmoji>👋🏽</WelcomeEmoji>
       </MessageTitle>
@@ -44,13 +44,13 @@ export default function Instructions() {
         })}
       </Message>
       <Link to="/cv-form">
-        <Button>Let's get started</Button>
+        <PrimaryButton>Let's get started</PrimaryButton>
       </Link>
       <MessageFootnote>
         <AiFillAlert />
         Built to be seen on desktop screens.
       </MessageFootnote>
-    </MessageBox>
+    </MessageWrapper>
   );
 }
 
