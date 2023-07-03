@@ -20,7 +20,8 @@ export const MessageBox = styled.div`
 
 export const MessageTitle = styled.h2`
   align-self: flex-start;
-  font-size: ${(props) => props.theme.fontSize.xxl};
+  font-size: ${(props) =>
+    props.big ? props.theme.fontSize.xxl : props.theme.fontSize.lg};
   margin-left: 2rem;
   font-weight: bold;
    &:hover {

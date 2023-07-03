@@ -35,7 +35,7 @@ const listOfInstructions = [
 export default function Instructions() {
   return (
     <MessageBox>
-      <MessageTitle>
+      <MessageTitle big>
         Hello there! <WelcomeEmoji>👋🏽</WelcomeEmoji>
       </MessageTitle>
       <Message>
