@@ -16,7 +16,7 @@ export default function Navigation() {
         <Button primary>Source Code</Button>
       </a>
       <Title>Generate your CV</Title>
-      <Link to="/">
+      <Link to="/generate-your-cv">
         <Button>Reset</Button>
       </Link>
     </NavigationStyled>

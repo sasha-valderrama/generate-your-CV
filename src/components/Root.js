@@ -1,14 +1,14 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
 import { ThemeProvider } from '@emotion/react';
 import Navigation from './Navigation';
+import Home from './Home';
 
 export default function Root() {
   return (
     <>
       <ThemeProvider theme={theme}>
         <Navigation />
-        <Outlet />
+        <Home />
       </ThemeProvider>
     </>
   );
