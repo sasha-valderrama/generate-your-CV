@@ -23,7 +23,7 @@ export default function Footer() {
         target="_blank"
         rel="noreferrer"
       >
-        <NavTitle>🍵 Make by Sasha Valderrama 👩🏽‍💻</NavTitle>
+        <NavTitle>🍵 Made by Sasha Valderrama 👩🏽‍💻</NavTitle>
       </a>
       {pathname === '/' ? (
         <></>
