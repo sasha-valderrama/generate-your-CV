@@ -20,7 +20,16 @@ export const MessageBox = styled.div`
 
 export const MessageTitle = styled.h2`
   align-self: flex-start;
-  font-size: ${(props) => props.theme.fontSize.xl};
+  font-size: ${(props) => props.theme.fontSize.xxl};
+  margin-left: 2rem;
+  font-weight: bold;
+   &:hover {
+    color: ${(props) => props.theme.colors.tertiary};
+`;
+
+export const MessageFootnote = styled.p`
+  align-self: flex-end;
+  font-size: ${(props) => props.theme.fontSize.xs};
   margin-left: 2rem;
   font-weight: bold;
    &:hover {
@@ -28,6 +37,6 @@ export const MessageTitle = styled.h2`
 `;
 
 export const Message = styled.div`
-  font-size: ${(props) => props.theme.fontSize.md};
+  font-size: ${(props) => props.theme.fontSize.lg};
   line-height: 1.2;
 `;

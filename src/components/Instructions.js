@@ -2,7 +2,13 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { Button } from './ui/Button';
 import { Link } from 'react-router-dom';
-import { Message, MessageBox, MessageTitle } from './ui/MessageBox';
+import { AiFillAlert } from 'react-icons/ai';
+import {
+  Message,
+  MessageBox,
+  MessageFootnote,
+  MessageTitle,
+} from './ui/MessageBox';
 import { wave } from '../util/keyframes';
 import { nanoid } from 'nanoid';
 
@@ -40,6 +46,10 @@ export default function Instructions() {
       <Link to="/cv-form">
         <Button>Let's get started</Button>
       </Link>
+      <MessageFootnote>
+        <AiFillAlert />
+        Built to be seen on desktop screens.
+      </MessageFootnote>
     </MessageBox>
   );
 }
