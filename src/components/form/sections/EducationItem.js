@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { BsDash } from 'react-icons/bs';
 import { defaultInput, flexColumn } from '../../ui-styles/utilities';
-import Edit from '../../ui-styles/Editor';
+import Edit from '../../Edit';
 
 export default function EducationItem({
   item,

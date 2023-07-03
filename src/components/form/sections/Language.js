@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { TbPoint } from 'react-icons/tb';
 import { centerContentInColumn, defaultInput } from '../../ui-styles/utilities';
-import Edit from '../../ui-styles/Editor';
+import Edit from '../../Edit';
 
 export default function Language({
   language,
@@ -42,7 +42,11 @@ export default function Language({
         onChange={(e) => handleProficiencyChange(e)}
         placeholder="Proficiency level"
       ></LanguageItem>
-      <Edit item={language} onAddItem={onAddItem} onRemoveItem={onRemoveItem} />
+      <Edit
+        item={language}
+        onAddItem={onAddItem}
+        onRemoveItem={onRemoveItem}
+      />
     </LanguageWrapper>
   );
 }

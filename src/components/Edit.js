@@ -1,11 +1,11 @@
 import React from 'react';
-import { EditorButton } from './buttons';
+import { EditorButton } from './ui-styles/buttons';
 import { MdOutlineAddCircle } from 'react-icons/md';
 import { MdDelete } from 'react-icons/md';
 import styled from '@emotion/styled';
-import { centerContent } from './utilities';
+import { centerContent } from './ui-styles/utilities';
 
-export default function Editor({ item, onAddItem, onRemoveItem }) {
+export default function Edit({ item, onAddItem, onRemoveItem }) {
   return (
     <EditorWrapper>
       <EditorButton add onClick={() => onAddItem({ item })}>

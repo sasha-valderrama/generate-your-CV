@@ -9,7 +9,6 @@ import Experience from './sections/Experience';
 import EducationItem from './sections/EducationItem';
 import styled from '@emotion/styled';
 import { flexColumn, standardBorderRadius } from '../ui-styles/utilities';
-import Edit from '../ui-styles/Editor';
 
 export default function Form({
   cv,
@@ -19,8 +18,6 @@ export default function Form({
   onChangeEducation,
   onChangeLanguages,
   onChangeSkills,
-  onAddItem,
-  onRemoveItem,
 }) {
   const { profile, about, experiences, education, languages, skills } = cv;
 
@@ -42,20 +39,11 @@ export default function Form({
           <Section subtitle="Experience">
             {experiences.map((experience) => {
               return (
-                <>
                   <Experience
                     key={experience.id}
                     experience={experience}
                     onChangeExperiences={onChangeExperiences}
-                  >
-                    {/* <Edit
-                      item={experience}
-                      onAddItem={onAddItem}
-                      onRemoveItem={onRemoveItem}
-                    /> */}
-                  </Experience>
-                </>
-              );
+                  />);
             })}
           </Section>
           <Section right subtitle="Education">

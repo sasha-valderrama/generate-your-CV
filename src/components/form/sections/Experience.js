@@ -6,7 +6,8 @@ import {
   defaultTextarea,
   flexColumn,
 } from '../../ui-styles/utilities';
-import Edit from '../../ui-styles/Editor';
+import Edit from '../../Edit';
+
 
 export default function Experience({
   experience,
