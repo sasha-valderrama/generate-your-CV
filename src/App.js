@@ -13,8 +13,8 @@ import PageNotFound from './components/PageNotFound';
 
 const appRouter = createHashRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Root />}>
-      <Route path="/" element={<Home />}>
+    <Route path="/generate-your-cv/" element={<Root />}>
+      <Route path="/generate-your-cv/" element={<Home />}>
         <Route index element={<Instructions />} />
         <Route path="cv-form" element={<Main />} />
         <Route path="*" element={<PageNotFound />} />
