@@ -15,7 +15,7 @@ export const ContactContainer = styled.div`
   ${standardBorderRadius};
   ${thinBorder};
   ${flexColumn};
-  width: 19rem;
+  width: 20rem;
   height: 10rem;
   margin-top: 1rem;
   gap: 0.5rem;
@@ -29,7 +29,7 @@ export const ContactWrapper = styled.div`
 `;
 
 export const ContactItem = styled.input`
-  width: 240px;
+  width: 275px;
   font-size: ${(props) => props.theme.fontSize.sm};
   background-color: inherit;
   border: none;

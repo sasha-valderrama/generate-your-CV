@@ -1,17 +1,20 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { standardBorderRadius, thinBorder } from '../../ui-styles/utilities';
+import AddEditor from '../../ui-styles/AddEditor';
 
-export default function Section({ subtitle, children }) {
+export default function Section({ subtitle, section, onAddItem, children }) {
   return (
     <SectionWrapper>
-      <Subtitle>{subtitle}</Subtitle>
+        <Subtitle>{subtitle}</Subtitle>
       <SectionListItem>{children}</SectionListItem>
+      <AddEditor section={section} onAddItem={onAddItem} />
     </SectionWrapper>
   );
 }
 
 const SectionWrapper = styled.div`
+  position: relative;
   ${thinBorder};
   ${standardBorderRadius};
   box-shadow: ${(props) => `5px 5px 0 ${props.theme.colors.white}`};

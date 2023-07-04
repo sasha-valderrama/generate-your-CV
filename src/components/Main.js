@@ -10,18 +10,59 @@ import { SecondaryButton } from './ui-styles/buttons';
 export default function Main() {
   const [cv, dispatch] = useReducer(reducer, initialState);
 
-  const handleAddItem = (section) => {
+  // const handleAddItem = (item, section) => {
+  //   dispatch({
+  //     type: 'ADD_ITEM',
+  //     item,
+  //     section,
+  //   });
+  //   console.log(item);
+  // };
+
+  const handleRemoveItem = (itemId, section) => {
+    //  dispatch({
+    //    type: 'REMOVE_ITEM',
+    //    itemId,
+    //    section,
+    //  });
+    console.log(itemId, section);
+  };
+
+  const handleAddExperience = (e, section) => {
+    e.preventDefault();
     dispatch({
-      type: 'ADD_ITEM',
-      section: section.toLowerCase(),
+      type: 'ADD_EXPERIENCE',
+      section,
     });
   };
 
-  const handleRemoveItem = (section) => {
+  const handleAddEducation = (e, section) => {
+    e.preventDefault();
     dispatch({
-      type: 'REMOVE_ITEM',
-      section: section.toLowerCase(),
+      type: 'ADD_EDUCATION',
+      section,
     });
+  };
+
+  const handleAddLanguage = (e, section) => {
+    e.preventDefault();
+    dispatch({
+      type: 'ADD_LANGUAGE',
+      section,
+    });
+  };
+
+  const handleAddSkill = (e, section) => {
+    e.preventDefault();
+    dispatch({
+      type: 'ADD_SKILL',
+      section,
+    });
+    console.log(section);
+  };
+
+  const handleRemoveSkillItem = (item, section) => {
+    console.log(item, item.id, section);
   };
 
   const handleChangeProfile = (e) => {
@@ -108,8 +149,12 @@ export default function Main() {
         onChangeEducation={handleChangeEducation}
         onChangeLanguages={handleChangeLanguages}
         onChangeSkills={handleChangeSkills}
-        onAddItem={handleAddItem}
         onRemoveItem={handleRemoveItem}
+        onAddExperience={handleAddExperience}
+        onAddEducation={handleAddEducation}
+        onAddLanguage={handleAddLanguage}
+        onAddSkill={handleAddSkill}
+        onRemoveSkillItem={handleRemoveSkillItem}
       />
       <SecondaryButton right onClick={handleShowUpdate}>
         ERASE ALL

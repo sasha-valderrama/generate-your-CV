@@ -54,14 +54,17 @@ export const SecondaryButton = styled(defaultButton)`
 
 export const EditorButton = styled(defaultButton)`
   border: none;
-  font-size: ${(props) => props.theme.fontSize.lg};
+  font-size: ${(props) =>
+    props.add ? props.theme.fontSize.md : props.theme.fontSize.sm};
   background: inherit;
   color: ${(props) => props.theme.colors.black};
+
   &:hover,
   &:focus {
-    transition: transform 200ms ease-out;
-    transform: scale(1.5);
+    transition: font-size 200ms ease-out;
+    font-size: ${(props) =>
+      props.add ? props.theme.fontSize.xxl : props.theme.fontSize.lg};
     color: ${(props) =>
-      props.add ? props.theme.colors.quaternary : props.theme.colors.tertiary};
+      props.add ? props.theme.colors.secondary : props.theme.colors.tertiary};
   }
 `;

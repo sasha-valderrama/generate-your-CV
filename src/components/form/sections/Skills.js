@@ -6,9 +6,9 @@ import Edit from '../../Edit';
 
 export default function Skill({
   skill,
+  section,
   onChangeSkills,
-  onAddItem,
-  onRemoveItem,
+  onRemoveSkillItem,
 }) {
   return (
     <SkillsWrapper>
@@ -23,7 +23,7 @@ export default function Skill({
           placeholder="Enter a Hard or Soft skill"
         />
       </div>
-      <Edit item={skill} onAddItem={onAddItem} onRemoveItem={onRemoveItem} />
+      <Edit item={skill} section={section} onRemoveItem={onRemoveSkillItem} />
     </SkillsWrapper>
   );
 }

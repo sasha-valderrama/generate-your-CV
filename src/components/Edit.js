@@ -5,13 +5,13 @@ import { MdDelete } from 'react-icons/md';
 import styled from '@emotion/styled';
 import { centerContent } from './ui-styles/utilities';
 
-export default function Edit({ item, onAddItem, onRemoveItem }) {
+export default function Edit({ item, id, section, onAddItem, onRemoveItem }) {
   return (
     <EditorWrapper>
-      <EditorButton add onClick={() => onAddItem({ item })}>
+      {/* <EditorButton add onClick={() => onAddItem({ item, section })}>
         <MdOutlineAddCircle />
-      </EditorButton>
-      <EditorButton onClick={() => onRemoveItem({ item })}>
+      </EditorButton> */}
+      <EditorButton onClick={() => onRemoveItem({ item, section })}>
         <MdDelete />
       </EditorButton>
     </EditorWrapper>
@@ -27,6 +27,4 @@ const EditorWrapper = styled.div`
   height: fit-content;
   ${centerContent};
   gap: 1rem;
-  border: 1px solid red;
-  // background-color: ${(props) => props.theme.colors.accent};
 `;

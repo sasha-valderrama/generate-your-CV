@@ -18,6 +18,13 @@ export default function Form({
   onChangeEducation,
   onChangeLanguages,
   onChangeSkills,
+  onRemoveItem,
+  onAddExperience,
+  onAddEducation,
+  onAddLanguage,
+  onAddSkill,
+  onRemoveLanguage,
+  onRemoveSkillItem,
 }) {
   const { profile, about, experiences, education, languages, skills } = cv;
 
@@ -36,45 +43,72 @@ export default function Form({
         ></Heading>
         <About about={about.description} onChangeAbout={onChangeAbout}></About>
         <BodyWrapper>
-          <Section subtitle="Experience">
+          <Section
+            subtitle="Experience"
+            section="experience"
+            onAddItem={onAddExperience}
+          >
             {experiences.map((experience) => {
               return (
-                  <Experience
-                    key={experience.id}
-                    experience={experience}
-                    onChangeExperiences={onChangeExperiences}
-                  />);
+                <Experience
+                  key={experience.id}
+                  experience={experience}
+                  section="experiences"
+                  onChangeExperiences={onChangeExperiences}
+                  onRemoveItem={onRemoveItem}
+                />
+              );
             })}
           </Section>
-          <Section right subtitle="Education">
+          <Section
+            right
+            subtitle="Education"
+            section="education"
+            onAddItem={onAddEducation}
+          >
             {education.map((item) => {
               return (
                 <EducationItem
                   key={item.id}
                   item={item}
+                  section="education"
                   onChangeEducation={onChangeEducation}
+                  onRemoveItem={onRemoveItem}
                 />
               );
             })}
           </Section>
-          <Section subtitle="Languages">
+          <Section
+            subtitle="Languages"
+            section="languages"
+            onAddItem={onAddLanguage}
+          >
             {languages.map((language) => {
               return (
                 <Language
                   key={language.id}
                   language={language}
+                  section="languages"
                   onChangeLanguages={onChangeLanguages}
+                  onRemoveItem={onRemoveLanguage}
                 />
               );
             })}
           </Section>
-          <Section right subtitle="Skills">
+          <Section
+            right
+            subtitle="Skills"
+            section="skills"
+            onAddItem={onAddSkill}
+          >
             {skills.map((skill) => {
               return (
                 <Skill
                   key={skill.id}
                   skill={skill}
+                  section="skills"
                   onChangeSkills={onChangeSkills}
+                  onRemoveSkillItem={onRemoveSkillItem}
                 />
               );
             })}

@@ -4,11 +4,7 @@ import { MdEmail } from 'react-icons/md';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import { GiSpiderWeb } from 'react-icons/gi';
 import { ContactContainer, ContactItem, ContactWrapper } from './contact';
-import {
-  HeadingContainer,
-  ProfileContainer,
-  ProfileInput,
-} from './profile';
+import { HeadingContainer, ProfileContainer, ProfileInput } from './profile';
 
 export default function Heading({
   firstName,
@@ -31,7 +27,7 @@ export default function Heading({
           name="firstName"
           id="firstName"
           placeholder="Your first Name"
-          maxLength="12"
+          maxLength="25"
           value={firstName}
           onChange={(e) => onChangeProfile(e)}
         />
@@ -41,7 +37,7 @@ export default function Heading({
           name="lastName"
           id="lastName"
           placeholder="Your last Name"
-          maxLength="12"
+          maxLength="25"
           value={lastName}
           onChange={(e) => onChangeProfile(e)}
         />

@@ -1,15 +1,21 @@
+import { nanoid } from 'nanoid';
 import { defaultValues, initialState } from '../data';
 
 export const reducer = (state, action) => {
   switch (action.type) {
-    case 'ADD_ITEM':
-      return {
-        ...state,
-      };
-    case 'REMOVE_ITEM':
-      return {
-        ...state,
-      };
+    // case 'ADD_ITEM':
+    //   return {
+    //     ...state,
+    //     [action.section]: [...state[action.section], action.item],
+    //   };
+    // case 'REMOVE_ITEM':
+    //   return {
+    //     ...state,
+    //     [action.section]: state[action.section].filter(
+    //       (item) => item.id !== action.itemId
+    //     ),
+    //   };
+
     case 'UPDATE_PROFILE':
       return {
         ...state,
@@ -77,6 +83,50 @@ export const reducer = (state, action) => {
           }
           return skill;
         }),
+      };
+    case 'ADD_EXPERIENCE':
+      return {
+        ...state,
+        experiences: [
+          ...state.experiences,
+          {
+            id: nanoid(5),
+            from: '',
+            to: '',
+            position: '',
+            company: '',
+            location: '',
+            description: '',
+          },
+        ],
+      };
+    case 'ADD_EDUCATION':
+      return {
+        ...state,
+        education: [
+          ...state.education,
+          {
+            id: nanoid(5),
+            from: '',
+            to: '',
+            university: '',
+            degree: '',
+            subject: '',
+          },
+        ],
+      };
+    case 'ADD_LANGUAGE':
+      return {
+        ...state,
+        languages: [
+          ...state.languages,
+          { id: nanoid(5), langName: '', proficiency: '' },
+        ],
+      };
+    case 'ADD_SKILL':
+      return {
+        ...state,
+        skills: [...state.skills, { id: nanoid(5), name: '' }],
       };
     case 'UPDATE_TEMPLATE':
       return defaultValues;

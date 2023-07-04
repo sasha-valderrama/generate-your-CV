@@ -8,7 +8,7 @@ export const defaultValues = {
     phone: '+49 1587 578 13 41',
     address: 'Berlin,Germany',
     email: 'alexander_gonzalez@gmail.com',
-    url: 'github.com/sasha-valderrama',
+    url: 'https://github.com/sasha-valderrama',
   },
   about: {
     description:
