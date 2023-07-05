@@ -11,8 +11,7 @@ import RemoveEditor from '../../ui/RemoveEditor';
 export default function Experience({
   experience,
   onChangeExperiences,
-  onAddItem,
-  onRemoveItem,
+  onRemoveExperience,
 }) {
   const handleFromChange = (e) => {
     const { value } = e.target;
@@ -98,11 +97,7 @@ export default function Experience({
         onChange={(e) => handleDescriptionChange(e)}
         placeholder="A short description of the work you did there."
       />
-      <RemoveEditor
-        item={experience}
-        onAddItem={onAddItem}
-        onRemoveItem={onRemoveItem}
-      />
+      <RemoveEditor item={experience} onRemoveItem={onRemoveExperience} />
     </ExperienceWrapper>
   );
 }

@@ -9,13 +9,35 @@ import { SecondaryButton } from './ui/styles/buttons';
 
 export default function Main() {
   const [cv, dispatch] = useReducer(reducer, initialState);
+  const handleRemoveExperience = (e, item) => {
+    e.preventDefault();
+    dispatch({
+      type: 'REMOVE_EXPERIENCE',
+      itemId: item.id,
+    });
+  };
+  const handleRemoveEducation = (e, item) => {
+    e.preventDefault();
+    dispatch({
+      type: 'REMOVE_EDUCATION',
+      itemId: item.id,
+    });
+  };
 
-  const handleRemoveSkill = (skillId) => {
+  const handleRemoveLanguage = (e, item) => {
+    e.preventDefault();
+    dispatch({
+      type: 'REMOVE_LANGUAGE',
+      itemId: item.id,
+    });
+  };
+
+  const handleRemoveSkill = (e, item) => {
+    e.preventDefault();
     dispatch({
       type: 'REMOVE_SKILL',
-      itemId: skillId,
+      itemId: item.id,
     });
-    // console.log(skill.id);
   };
 
   const handleAddExperience = (e, section) => {
@@ -135,12 +157,15 @@ export default function Main() {
         onChangeEducation={handleChangeEducation}
         onChangeLanguages={handleChangeLanguages}
         onChangeSkills={handleChangeSkills}
-        // onRemoveItem={handleRemoveItem}
         onAddExperience={handleAddExperience}
         onAddEducation={handleAddEducation}
         onAddLanguage={handleAddLanguage}
         onAddSkill={handleAddSkill}
+        onRemoveExperience={handleRemoveExperience}
+        onRemoveEducation={handleRemoveEducation}
+        onRemoveLanguage={handleRemoveLanguage}
         onRemoveSkill={handleRemoveSkill}
+        // onRemoveItem={handleRemoveItem}
       />
       <SecondaryButton right onClick={handleShowUpdate}>
         ERASE ALL

@@ -4,12 +4,7 @@ import { TbPoint } from 'react-icons/tb';
 import { centerContentInColumn, defaultInput } from '../../ui/styles/utilities';
 import RemoveEditor from '../../ui/RemoveEditor';
 
-export default function Skill({
-  skill,
-  section,
-  onChangeSkills,
-  onRemoveSkill,
-}) {
+export default function Skill({ skill, onChangeSkills, onRemoveSkill }) {
   return (
     <SkillsWrapper>
       <div>
@@ -23,7 +18,10 @@ export default function Skill({
           placeholder="Enter a Hard or Soft skill"
         />
       </div>
-      <RemoveEditor item={skill} onRemoveItem={onRemoveSkill} />
+      <RemoveEditor
+        item={skill}
+        onRemoveItem={onRemoveSkill}
+      />
     </SkillsWrapper>
   );
 }

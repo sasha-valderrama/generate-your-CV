@@ -128,13 +128,27 @@ export const reducer = (state, action) => {
         ...state,
         skills: [...state.skills, { id: nanoid(5), name: '' }],
       };
-    case 'REMOVE_SKILL':
-      const newSkills = state.skills.filter(
-        (skill) => skill.id !== action.itemId
-      );
+    case 'REMOVE_EXPERIENCE':
       return {
         ...state,
-        skills: newSkills,
+        experiences: state.experiences.filter(
+          (item) => item.id !== action.itemId
+        ),
+      };
+    case 'REMOVE_EDUCATION':
+      return {
+        ...state,
+        education: state.education.filter((item) => item.id !== action.itemId),
+      };
+    case 'REMOVE_LANGUAGE':
+      return {
+        ...state,
+        languages: state.languages.filter((item) => item.id !== action.itemId),
+      };
+    case 'REMOVE_SKILL':
+      return {
+        ...state,
+        skills: state.skills.filter((item) => item.id !== action.itemId),
       };
     case 'UPDATE_TEMPLATE':
       return defaultValues;

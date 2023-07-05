@@ -7,7 +7,7 @@ import { centerContent } from './styles/utilities';
 export default function RemoveEditor({ item, onRemoveItem }) {
   return (
     <EditorWrapper>
-      <EditorButton onClick={(e) => onRemoveItem(e, { item })}>
+      <EditorButton onClick={(e) => onRemoveItem(e, item)}>
         <MdDelete />
       </EditorButton>
     </EditorWrapper>

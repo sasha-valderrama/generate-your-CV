@@ -13,14 +13,13 @@ import {
 } from './ui/styles/infoBox';
 
 const listOfInstructions = [
-  // {
-  //   id: nanoid(),
-  //   instruction:
-  //     'Click on the Edit to start updating your resume and submit them.',
-  // },
   {
     id: nanoid(),
     instruction: 'If you need some inspiration click on SHOW TEMPLATE.',
+  },
+  {
+    id: nanoid(),
+    instruction: 'You can add or remove items in each section.',
   },
   {
     id: nanoid(),
@@ -28,7 +27,7 @@ const listOfInstructions = [
   },
   {
     id: nanoid(),
-    instruction: 'Click on RESET if you need to start all over.',
+    instruction: 'Click on RESET to lose all your info and come back here',
   },
 ];
 

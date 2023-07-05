@@ -7,8 +7,7 @@ import RemoveEditor from '../../ui/RemoveEditor';
 export default function EducationItem({
   item,
   onChangeEducation,
-  onAddItem,
-  onRemoveItem,
+  onRemoveEducation,
 }) {
   const handleFromChange = (e) => {
     const { value } = e.target;
@@ -102,11 +101,7 @@ export default function EducationItem({
           placeholder="Subject"
         />
       </EducationInputWrapper>
-      <RemoveEditor
-        item={item}
-        onAddItem={onAddItem}
-        onRemoveItem={onRemoveItem}
-      />
+      <RemoveEditor item={item} onRemoveItem={onRemoveEducation} />
     </EducationWrapper>
   );
 }

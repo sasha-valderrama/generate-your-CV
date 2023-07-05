@@ -7,8 +7,7 @@ import RemoveEditor from '../../ui/RemoveEditor';
 export default function Language({
   language,
   onChangeLanguages,
-  onAddItem,
-  onRemoveItem,
+  onRemoveLanguage,
 }) {
   const handleNameChange = (e) => {
     const { value } = e.target;
@@ -42,11 +41,7 @@ export default function Language({
         onChange={(e) => handleProficiencyChange(e)}
         placeholder="Proficiency level"
       ></LanguageItem>
-      <RemoveEditor
-        item={language}
-        onAddItem={onAddItem}
-        onRemoveItem={onRemoveItem}
-      />
+      <RemoveEditor item={language} onRemoveItem={onRemoveLanguage} />
     </LanguageWrapper>
   );
 }
