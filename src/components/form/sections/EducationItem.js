@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { BsDash } from 'react-icons/bs';
 import { defaultInput, flexColumn } from '../../ui-styles/utilities';
-import Edit from '../../Edit';
+import RemoveEditor from '../../ui-styles/RemoveEditor';
 
 export default function EducationItem({
   item,
@@ -102,7 +102,11 @@ export default function EducationItem({
           placeholder="Subject"
         />
       </EducationInputWrapper>
-      <Edit item={item} onAddItem={onAddItem} onRemoveItem={onRemoveItem} />
+      <RemoveEditor
+        item={item}
+        onAddItem={onAddItem}
+        onRemoveItem={onRemoveItem}
+      />
     </EducationWrapper>
   );
 }

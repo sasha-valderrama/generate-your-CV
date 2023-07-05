@@ -6,8 +6,7 @@ import {
   defaultTextarea,
   flexColumn,
 } from '../../ui-styles/utilities';
-import Edit from '../../Edit';
-
+import RemoveEditor from '../../ui-styles/RemoveEditor';
 
 export default function Experience({
   experience,
@@ -99,7 +98,7 @@ export default function Experience({
         onChange={(e) => handleDescriptionChange(e)}
         placeholder="A short description of the work you did there."
       />
-      <Edit
+      <RemoveEditor
         item={experience}
         onAddItem={onAddItem}
         onRemoveItem={onRemoveItem}

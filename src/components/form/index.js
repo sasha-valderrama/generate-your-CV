@@ -18,13 +18,12 @@ export default function Form({
   onChangeEducation,
   onChangeLanguages,
   onChangeSkills,
-  onRemoveItem,
   onAddExperience,
   onAddEducation,
   onAddLanguage,
   onAddSkill,
   onRemoveLanguage,
-  onRemoveSkillItem,
+  onRemoveSkill,
 }) {
   const { profile, about, experiences, education, languages, skills } = cv;
 
@@ -55,7 +54,7 @@ export default function Form({
                   experience={experience}
                   section="experiences"
                   onChangeExperiences={onChangeExperiences}
-                  onRemoveItem={onRemoveItem}
+                  // onRemoveItem={onRemoveItem}
                 />
               );
             })}
@@ -73,7 +72,7 @@ export default function Form({
                   item={item}
                   section="education"
                   onChangeEducation={onChangeEducation}
-                  onRemoveItem={onRemoveItem}
+                  // onRemoveItem={onRemoveItem}
                 />
               );
             })}
@@ -108,7 +107,7 @@ export default function Form({
                   skill={skill}
                   section="skills"
                   onChangeSkills={onChangeSkills}
-                  onRemoveSkillItem={onRemoveSkillItem}
+                  onRemoveSkill={onRemoveSkill}
                 />
               );
             })}

@@ -3,7 +3,6 @@ import { MdOutlineAddCircle } from 'react-icons/md';
 import styled from '@emotion/styled';
 import { EditorButton } from './buttons';
 
-
 export default function AddEditor({ section, onAddItem }) {
   return (
     <EditorWrapper>
@@ -17,5 +16,6 @@ export default function AddEditor({ section, onAddItem }) {
 const EditorWrapper = styled.div`
   position: absolute;
   z-index: 99;
-  bottom: 0.2rem;
+  bottom: 0.5rem;
+  left: 50%;
 `;

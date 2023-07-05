@@ -55,7 +55,7 @@ export const SecondaryButton = styled(defaultButton)`
 export const EditorButton = styled(defaultButton)`
   border: none;
   font-size: ${(props) =>
-    props.add ? props.theme.fontSize.md : props.theme.fontSize.sm};
+    props.add ? props.theme.fontSize.lg : props.theme.fontSize.sm};
   background: inherit;
   color: ${(props) => props.theme.colors.black};
 
@@ -63,7 +63,7 @@ export const EditorButton = styled(defaultButton)`
   &:focus {
     transition: font-size 200ms ease-out;
     font-size: ${(props) =>
-      props.add ? props.theme.fontSize.xxl : props.theme.fontSize.lg};
+      props.add ? props.theme.fontSize.xl : props.theme.fontSize.lg};
     color: ${(props) =>
       props.add ? props.theme.colors.secondary : props.theme.colors.tertiary};
   }

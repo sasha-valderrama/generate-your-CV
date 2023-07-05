@@ -128,6 +128,14 @@ export const reducer = (state, action) => {
         ...state,
         skills: [...state.skills, { id: nanoid(5), name: '' }],
       };
+    case 'REMOVE_SKILL':
+      const newSkills = state.skills.filter(
+        (skill) => skill.id !== action.itemId
+      );
+      return {
+        ...state,
+        skills: newSkills,
+      };
     case 'UPDATE_TEMPLATE':
       return defaultValues;
 

@@ -6,7 +6,7 @@ import AddEditor from '../../ui-styles/AddEditor';
 export default function Section({ subtitle, section, onAddItem, children }) {
   return (
     <SectionWrapper>
-        <Subtitle>{subtitle}</Subtitle>
+      <Subtitle>{subtitle}</Subtitle>
       <SectionListItem>{children}</SectionListItem>
       <AddEditor section={section} onAddItem={onAddItem} />
     </SectionWrapper>
@@ -23,6 +23,7 @@ const SectionWrapper = styled.div`
   padding: 0.5rem;
   margin-left: ${(props) => (props.right ? '1rem' : '2rem')};
   margin-right: ${(props) => (props.right ? '1rem' : '2rem')};
+  padding-bottom: 2rem;
   background-color: ${(props) => props.theme.colors.neutralSecond};
 `;
 
