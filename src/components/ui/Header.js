@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { NavTitle, NavWrapper } from './ui-styles/navbar';
-import { PrimaryButton } from './ui-styles/buttons';
+import { NavTitle, NavWrapper } from './styles/navbar';
+import { PrimaryButton } from './styles/buttons';
 
 export default function Header() {
   return (

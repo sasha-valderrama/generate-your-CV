@@ -1,8 +1,8 @@
 import React from 'react';
-import { EditorButton } from './buttons';
+import { EditorButton } from './styles/buttons';
 import { MdDelete } from 'react-icons/md';
 import styled from '@emotion/styled';
-import { centerContent } from './utilities';
+import { centerContent } from './styles/utilities';
 
 export default function RemoveEditor({ item, onRemoveItem }) {
   return (

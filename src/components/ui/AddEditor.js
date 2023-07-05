@@ -1,7 +1,8 @@
 import React from 'react';
 import { MdOutlineAddCircle } from 'react-icons/md';
 import styled from '@emotion/styled';
-import { EditorButton } from './buttons';
+import { EditorButton } from './styles/buttons';
+
 
 export default function AddEditor({ section, onAddItem }) {
   return (

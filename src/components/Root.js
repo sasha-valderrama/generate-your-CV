@@ -1,8 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from '@emotion/react';
 import Home from './Home';
-import Header from './Header';
-import Footer from './Footer';
+import Header from './ui/Header';
+import Footer from './ui/Footer';
 
 export default function Root() {
   return (

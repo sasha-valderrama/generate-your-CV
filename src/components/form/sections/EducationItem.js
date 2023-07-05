@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { BsDash } from 'react-icons/bs';
-import { defaultInput, flexColumn } from '../../ui-styles/utilities';
-import RemoveEditor from '../../ui-styles/RemoveEditor';
+import { defaultInput, flexColumn } from '../../ui/styles/utilities';
+import RemoveEditor from '../../ui/RemoveEditor';
 
 export default function EducationItem({
   item,

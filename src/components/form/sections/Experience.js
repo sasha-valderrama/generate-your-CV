@@ -5,8 +5,8 @@ import {
   defaultInput,
   defaultTextarea,
   flexColumn,
-} from '../../ui-styles/utilities';
-import RemoveEditor from '../../ui-styles/RemoveEditor';
+} from '../../ui/styles/utilities';
+import RemoveEditor from '../../ui/RemoveEditor';
 
 export default function Experience({
   experience,

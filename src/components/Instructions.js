@@ -2,15 +2,15 @@ import styled from '@emotion/styled';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AiFillAlert } from 'react-icons/ai';
+import { wave } from './ui/styles/keyframes';
+import { nanoid } from 'nanoid';
+import { PrimaryButton } from './ui/styles/buttons';
 import {
   Message,
   MessageFootnote,
   MessageTitle,
   MessageWrapper,
-} from './ui-styles/infoBox';
-import { wave } from './ui-styles/keyframes';
-import { nanoid } from 'nanoid';
-import { PrimaryButton } from './ui-styles/buttons';
+} from './ui/styles/infoBox';
 
 const listOfInstructions = [
   // {

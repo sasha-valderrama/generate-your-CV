@@ -1,7 +1,7 @@
 import React from 'react';
-import { PrimaryButton } from './ui-styles/buttons';
+import { PrimaryButton } from './styles/buttons';
 import { Link, useLocation } from 'react-router-dom';
-import { NavTitle, NavWrapper } from './ui-styles/navbar';
+import { NavTitle, NavWrapper } from './styles/navbar';
 
 export default function Footer() {
   const { pathname } = useLocation();

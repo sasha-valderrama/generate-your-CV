@@ -1,7 +1,7 @@
 import React from 'react';
-import { MessageTitle, MessageWrapper } from './ui-styles/infoBox';
 import { Link } from 'react-router-dom';
-import { PrimaryButton } from './ui-styles/buttons';
+import { PrimaryButton } from './ui/styles/buttons';
+import { MessageTitle, MessageWrapper } from './ui/styles/infoBox';
 
 export default function PageNotFound() {
   return (

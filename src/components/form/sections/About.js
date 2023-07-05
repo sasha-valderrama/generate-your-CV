@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { standardBorderRadius, thinBorder } from '../../ui-styles/utilities';
-import { defaultTextarea } from '../../ui-styles/utilities';
+import { standardBorderRadius, thinBorder } from '../../ui/styles/utilities';
+import { defaultTextarea } from '../../ui/styles/utilities';
 
 export default function About({ about, onChangeAbout }) {
   return (

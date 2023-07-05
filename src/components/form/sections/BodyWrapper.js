@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { marginAuto } from '../../ui-styles/utilities';
+import { marginAuto } from '../../ui/styles/utilities';
 
 export const BodyWrapper = styled.main`
   display: grid;

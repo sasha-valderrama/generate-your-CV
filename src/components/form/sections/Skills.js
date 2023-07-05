@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { TbPoint } from 'react-icons/tb';
-import { centerContentInColumn, defaultInput } from '../../ui-styles/utilities';
-import RemoveEditor from '../../ui-styles/RemoveEditor';
+import { centerContentInColumn, defaultInput } from '../../ui/styles/utilities';
+import RemoveEditor from '../../ui/RemoveEditor';
 
 export default function Skill({
   skill,
@@ -23,10 +23,7 @@ export default function Skill({
           placeholder="Enter a Hard or Soft skill"
         />
       </div>
-      <RemoveEditor
-        item={skill}
-        onRemoveItem={onRemoveSkill}
-      />
+      <RemoveEditor item={skill} onRemoveItem={onRemoveSkill} />
     </SkillsWrapper>
   );
 }

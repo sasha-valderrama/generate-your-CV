@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
-import { standardBorderRadius, thinBorder } from '../../ui-styles/utilities';
-import AddEditor from '../../ui-styles/AddEditor';
+import { standardBorderRadius, thinBorder } from '../../ui/styles/utilities';
+import AddEditor from '../../ui/AddEditor';
 
 export default function Section({ subtitle, section, onAddItem, children }) {
   return (

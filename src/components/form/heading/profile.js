@@ -3,8 +3,8 @@ import {
   marginAuto,
   standardBorderRadius,
   thinBorder,
-} from '../../ui-styles/utilities';
-import { defaultInput } from '../../ui-styles/utilities';
+} from '../../ui/styles/utilities';
+import { defaultInput } from '../../ui/styles/utilities';
 
 export const HeadingContainer = styled.div`
   position: relative;

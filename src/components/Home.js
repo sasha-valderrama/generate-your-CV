@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { centerContent } from './ui-styles/utilities';
+import { centerContent } from './ui/styles/utilities';
 import { Outlet } from 'react-router-dom';
 
 export default function Home() {
