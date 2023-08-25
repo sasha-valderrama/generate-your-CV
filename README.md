@@ -1,7 +1,5 @@
 # ✨✨CV Generator✨✨
 
-😺🐶*My first React Project, Ever* 👩🏽‍💻🍵
-
 This React app allows the user update the cv template with their own information.
 
 ## 💻📽️Visit the app!
